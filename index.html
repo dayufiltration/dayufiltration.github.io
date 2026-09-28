@@ -7,7 +7,7 @@
 <meta name="description" content="Xinxiang Da Yu Filtration Equipment Co., Ltd. develops, manufactures and sells filtration equipment and cartridges for gas, liquid and oil — serving natural gas, electric power, industrial water treatment and petrochemical industries.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230C1E33'/%3E%3Cpath d='M18 16h28v8H26v8h18v8H26v8h20v8H18z' fill='%23E8590C'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
-<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Archivo:wght@400;500;600;700&family=Cairo:wght@400;500;600;700;800;900&display=swap">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Archivo:wght@400;500;600;700&display=swap">
 <style>
 /* ============ Tokens ============ */
 :root{
@@ -274,32 +274,6 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   .hero-inner{padding-top:80px;padding-bottom:120px}
   .form-card{padding:28px 22px}
 }
-/* ============ Language toggle ============ */
-.lang-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--font-b);font-size:13px;font-weight:600;border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 15px;cursor:pointer;transition:border-color .2s,color .2s,background .2s;line-height:1}
-.lang-toggle:hover{border-color:var(--signal);color:var(--signal)}
-html[lang="ar"] .lang-toggle{border-color:var(--ink);background:var(--ink);color:#fff}
-html[lang="ar"] .lang-toggle:hover{border-color:var(--signal);background:var(--signal)}
-.mobile-menu .lang-toggle{margin-top:16px;align-self:flex-start}
-
-/* ============ Arabic / RTL ============ */
-html[lang="ar"]{--font-d:"Cairo","Barlow Condensed",sans-serif;--font-b:"Cairo",system-ui,"Segoe UI",sans-serif}
-html[lang="ar"] body{letter-spacing:0;line-height:1.85}
-html[lang="ar"] h1,html[lang="ar"] h2,html[lang="ar"] h3,html[lang="ar"] .brand-name,html[lang="ar"] .stat b,html[lang="ar"] .chip,html[lang="ar"] .mobile-menu a,html[lang="ar"] .footer h4,html[lang="ar"] .q-badges span{font-family:var(--font-d);text-transform:none;letter-spacing:0}
-html[lang="ar"] h1{line-height:1.4}
-html[lang="ar"] h2{line-height:1.35}
-html[lang="ar"] h3{line-height:1.55}
-html[lang="ar"] .hero h1{line-height:1.4}
-html[lang="ar"] .overline,html[lang="ar"] .btn,html[lang="ar"] .text-link,html[lang="ar"] .prod-card .inq,html[lang="ar"] .news-card .more,html[lang="ar"] .prod-card .ph .tag,html[lang="ar"] .stat span,html[lang="ar"] .hero-kicker,html[lang="ar"] .f-field label,html[lang="ar"] .news-card .date,html[lang="ar"] .nav a{text-transform:none;letter-spacing:0}
-html[dir="rtl"] .btn svg,html[dir="rtl"] .text-link svg,html[dir="rtl"] .prod-card .inq svg,html[dir="rtl"] .news-card .more svg{transform:scaleX(-1)}
-html[dir="rtl"] .text-link:hover svg{transform:scaleX(-1) translateX(-4px)}
-html[dir="rtl"] .prod-card .inq:hover svg{transform:scaleX(-1) translateX(-4px)}
-html[dir="rtl"] .news-card:hover .more svg{transform:scaleX(-1) translateX(-4px)}
-html[dir="rtl"] .prod-card .inq{text-align:right}
-html[dir="rtl"] .stat{border-right:0;border-left:1px solid var(--line-soft)}
-html[dir="rtl"] .stat:last-child{border-left:0}
-html[dir="rtl"] .hero::after{background:linear-gradient(260deg,rgba(8,20,36,.94) 0%,rgba(10,26,46,.82) 42%,rgba(10,26,46,.42) 100%)}
-html[dir="rtl"] .nav a::after{left:auto;right:0}
-
 </style>
 </head>
 <body>
@@ -311,33 +285,31 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
       <img src="assets/dy-logo.webp" alt="DAYU FILTER logo">
       <span>
         <span class="brand-name">DAYU <span>FILTER</span></span>
-        <span class="brand-sub" data-i18n="Filtration Equipment Co., Ltd.">Filtration Equipment Co., Ltd.</span>
+        <span class="brand-sub">Filtration Equipment Co., Ltd.</span>
       </span>
     </a>
     <nav class="nav" aria-label="Main">
-      <a href="#products" data-i18n="Products">Products</a>
-      <a href="#about" data-i18n="About">About</a>
-      <a href="#quality" data-i18n="Quality">Quality</a>
-      <a href="#services" data-i18n="Services">Services</a>
-      <a href="#industries" data-i18n="Industries">Industries</a>
-      <a href="#news" data-i18n="News">News</a>
-      <a class="btn btn-primary nav-cta" href="#contact"><span data-i18n="Get a quote">Get a quote</span></a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#quality">Quality</a>
+      <a href="#services">Services</a>
+      <a href="#industries">Industries</a>
+      <a href="#news">News</a>
+      <a class="btn btn-primary nav-cta" href="#contact">Get a quote</a>
     </nav>
-    <button class="lang-toggle" id="langToggle" type="button" aria-label="العربية">العربية</button>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#products" data-i18n="Products">Products</a>
-  <a href="#about" data-i18n="About">About</a>
-  <a href="#quality" data-i18n="Quality">Quality</a>
-  <a href="#services" data-i18n="Services">Services</a>
-  <a href="#industries" data-i18n="Industries">Industries</a>
-  <a href="#news" data-i18n="News">News</a>
-  <a href="#contact" data-i18n="Get a quote">Get a quote</a>
-  <button class="lang-toggle" id="langToggleMobile" type="button" aria-label="العربية">العربية</button>
+  <a href="#products">Products</a>
+  <a href="#about">About</a>
+  <a href="#quality">Quality</a>
+  <a href="#services">Services</a>
+  <a href="#industries">Industries</a>
+  <a href="#news">News</a>
+  <a href="#contact">Get a quote</a>
 </div>
 
 <!-- ===== Hero ===== -->
@@ -345,15 +317,15 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
   <div class="hero-bg"></div>
   <div class="hero-gridlines"></div>
   <div class="hero-inner">
-    <span class="hero-kicker"><i></i><span data-i18n="Developing the spirit of craftsmanship">Developing the spirit of craftsmanship</span></span>
-    <h1><span data-i18n="Building the">Building the</span><br><span class="accent" data-i18n="Dayu brand">Dayu brand</span></h1>
-    <p class="hero-sub" data-i18n="Filtration technology · R&D · production · sales">Filtration technology · R&D · production · sales</p>
-    <p class="desc" data-i18n="Dedicated to the development of filtration technology, R&D, production and sales in the field of gas, liquid and oil — providing you with professional filtration solutions.">Dedicated to the development of filtration technology, R&D, production and sales in the field of gas, liquid and oil — providing you with professional filtration solutions.</p>
+    <span class="hero-kicker"><i></i>Developing the spirit of craftsmanship</span>
+    <h1>Building the<br><span class="accent">Dayu brand</span></h1>
+    <p class="hero-sub">Filtration technology · R&D · production · sales</p>
+    <p class="desc">Dedicated to the development of filtration technology, R&D, production and sales in the field of gas, liquid and oil — providing you with professional filtration solutions.</p>
     <div class="hero-cta">
-      <a class="btn btn-primary" href="#products"><span data-i18n="View our products">View our products</span>
+      <a class="btn btn-primary" href="#products">View our products
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
-      <a class="btn btn-outline" href="#contact" data-i18n="Get a free quote">Get a free quote</a>
+      <a class="btn btn-outline" href="#contact">Get a free quote</a>
     </div>
   </div>
 </section>
@@ -361,9 +333,9 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
 <!-- ===== Stats ===== -->
 <div class="container stats-band">
   <div class="stats rv">
-    <div class="stat"><b><span class="count" data-count="8600">0</span><em>m²+</em></b><span data-i18n="Factory area">Factory area</span></div>
-    <div class="stat"><b><span class="count" data-count="16">0</span><em>+</em></b><span data-i18n="Years of production experience">Years of production experience</span></div>
-    <div class="stat"><b><span class="count" data-count="20">0</span><em>+</em></b><span data-i18n="Patent certificates">Patent certificates</span></div>
+    <div class="stat"><b><span class="count" data-count="8600">0</span><em>m²+</em></b><span>Factory area</span></div>
+    <div class="stat"><b><span class="count" data-count="16">0</span><em>+</em></b><span>Years of production experience</span></div>
+    <div class="stat"><b><span class="count" data-count="20">0</span><em>+</em></b><span>Patent certificates</span></div>
   </div>
 </div>
 
@@ -373,15 +345,15 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
     <div class="split">
       <div class="split-media rv">
         <img src="assets/hero-banner2.jpg" alt="Dayu filter cartridges in an oil and gas plant">
-        <div class="chip"><b>16+</b><span data-i18n="Years in natural gas cartridges">Years in natural gas cartridges</span></div>
+        <div class="chip"><b>16+</b>Years in natural gas cartridges</div>
       </div>
       <div class="rv">
-        <span class="overline" data-i18n="R&D · Manufacturing · Service as a whole">R&D · Manufacturing · Service as a whole</span>
-        <h2 data-i18n="From the nanometer to the millimeter">From the nanometer to the millimeter</h2>
-        <p class="lead" style="margin-bottom:22px" data-i18n="Sixteen years of experience in manufacturing natural gas cartridges. Every scale of filtration — from the finest nanometer-level coalescence to millimeter-stage protection — is where we extend our excellence.">Sixteen years of experience in manufacturing natural gas cartridges. Every scale of filtration — from the finest nanometer-level coalescence to millimeter-stage protection — is where we extend our excellence.</p>
-        <p class="lead" data-i18n="We are a comprehensive enterprise that develops, manufactures and sells all kinds of filtration equipment and cartridges, with strong technical force, exquisite production technology, and complete processing and testing means.">We are a comprehensive enterprise that develops, manufactures and sells all kinds of filtration equipment and cartridges, with strong technical force, exquisite production technology, and complete processing and testing means.</p>
+        <span class="overline">R&D · Manufacturing · Service as a whole</span>
+        <h2>From the nanometer to the millimeter</h2>
+        <p class="lead" style="margin-bottom:22px">Sixteen years of experience in manufacturing natural gas cartridges. Every scale of filtration — from the finest nanometer-level coalescence to millimeter-stage protection — is where we extend our excellence.</p>
+        <p class="lead">We are a comprehensive enterprise that develops, manufactures and sells all kinds of filtration equipment and cartridges, with strong technical force, exquisite production technology, and complete processing and testing means.</p>
         <div style="margin-top:34px">
-          <a class="btn btn-navy" href="#products"><span data-i18n="Explore the range">Explore the range</span>
+          <a class="btn btn-navy" href="#products">Explore the range
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
@@ -395,29 +367,29 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
   <div class="container">
     <div class="sec-head rv">
       <div>
-        <span class="overline" data-i18n="Main products">Main products</span>
-        <h2 data-i18n="Shop our best-selling products">Shop our best-selling products</h2>
-        <p class="lead" data-i18n="Complete products and specifications provide customers with systematic filtration solutions.">Complete products and specifications provide customers with systematic filtration solutions.</p>
+        <span class="overline">Main products</span>
+        <h2>Shop our best-selling products</h2>
+        <p class="lead">Complete products and specifications provide customers with systematic filtration solutions.</p>
       </div>
       <div class="right">
-        <a class="btn btn-navy" href="https://www.dayufiltration.com/product/" target="_blank" rel="noopener"><span data-i18n="View all products">View all products</span>
+        <a class="btn btn-navy" href="https://www.dayufiltration.com/product/" target="_blank" rel="noopener">View all products
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
     <div class="prod-grid">
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-pp-wound.jpg" alt="PP wire winding filter element"><span class="tag" data-i18n="Wound">Wound</span></div><div class="bd"><h3 data-i18n="PP wire winding filter element">PP wire winding filter element</h3><div class="model" data-i18n='Depth wound series · 20"–40"'>Depth wound series · 20"–40"</div><button class="inq" data-prod="PP wire winding filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-glass-fiber.jpg" alt="Glass fiber filter element"><span class="tag" data-i18n="Fiber">Fiber</span></div><div class="bd"><h3 data-i18n="Glass fiber filter element">Glass fiber filter element</h3><div class="model" data-i18n="Fiber wound series · metal fittings">Fiber wound series · metal fittings</div><button class="inq" data-prod="Glass fiber filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-pleated-membrane.webp" alt="Microporous folded membrane filter element"><span class="tag" data-i18n="Membrane">Membrane</span></div><div class="bd"><h3 data-i18n="Microporous folded membrane filter element">Microporous folded membrane filter element</h3><div class="model" data-i18n="Pleated membrane series">Pleated membrane series</div><button class="inq" data-prod="Microporous folded membrane filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-cotton-wound.jpg" alt="Cotton wound filter cartridge"><span class="tag" data-i18n="Wound">Wound</span></div><div class="bd"><h3 data-i18n="Cotton wound filter cartridge">Cotton wound filter cartridge</h3><div class="model" data-i18n="Cotton wound series · metal ends">Cotton wound series · metal ends</div><button class="inq" data-prod="Cotton wound filter cartridge"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-hfu640.jpg" alt="Large flow filter element"><span class="tag" data-i18n="High flow">High flow</span></div><div class="bd"><h3 data-i18n="Large flow filter element">Large flow filter element</h3><div class="model">DY HFU640UY200J</div><button class="inq" data-prod="Large flow filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-mff-pp.jpg" alt="Melt-blown large flow filter element"><span class="tag" data-i18n="Melt-blown">Melt-blown</span></div><div class="bd"><h3 data-i18n="Melt-blown large flow filter element">Melt-blown large flow filter element</h3><div class="model">DY MFF-OP-PP-5</div><button class="inq" data-prod="Melt-blown large flow filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-duotov.jpg" alt="Natural gas filter element"><span class="tag" data-i18n="Natural gas">Natural gas</span></div><div class="bd"><h3 data-i18n="Natural gas filter element">Natural gas filter element</h3><div class="model">DY DUOTOV-90/559</div><button class="inq" data-prod="Natural gas filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-peco.jpg" alt="Natural gas filter element"><span class="tag" data-i18n="Natural gas">Natural gas</span></div><div class="bd"><h3 data-i18n="Natural gas filter element">Natural gas filter element</h3><div class="model">PECO PS-336-CC-10EB</div><button class="inq" data-prod="Natural gas filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-ps336.jpg" alt="Natural gas filter element"><span class="tag" data-i18n="Natural gas">Natural gas</span></div><div class="bd"><h3 data-i18n="Natural gas filter element">Natural gas filter element</h3><div class="model">DY PS336-CC-40LB</div><button class="inq" data-prod="Natural gas filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-ss-pleated.jpg" alt="Stainless steel pleated welded filter element"><span class="tag" data-i18n="Metal">Metal</span></div><div class="bd"><h3 data-i18n="Stainless steel pleated welded filter element">Stainless steel pleated welded filter element</h3><div class="model" data-i18n="Stainless steel series">Stainless steel series</div><button class="inq" data-prod="Stainless steel pleated welded filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-sintered-mesh.webp" alt="Sintered mesh filter element"><span class="tag" data-i18n="Sintered">Sintered</span></div><div class="bd"><h3 data-i18n="Sintered mesh filter element">Sintered mesh filter element</h3><div class="model" data-i18n="Sintered metal mesh series">Sintered metal mesh series</div><button class="inq" data-prod="Sintered mesh filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
-<article class="prod-card rv"><div class="ph"><img src="assets/prod-rk060p.webp" alt="Natural gas filter element"><span class="tag" data-i18n="Natural gas">Natural gas</span></div><div class="bd"><h3 data-i18n="Natural gas filter element">Natural gas filter element</h3><div class="model">RK060P</div><button class="inq" data-prod="Natural gas filter element"><span data-i18n="Send inquiry">Send inquiry</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-pp-wound.jpg" alt="PP wire winding filter element"><span class="tag">Wound</span></div><div class="bd"><h3>PP wire winding filter element</h3><div class="model">Depth wound series · 20"–40"</div><button class="inq" data-prod="PP wire winding filter element">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-glass-fiber.jpg" alt="Glass fiber filter element"><span class="tag">Fiber</span></div><div class="bd"><h3>Glass fiber filter element</h3><div class="model">Fiber wound series · metal fittings</div><button class="inq" data-prod="Glass fiber filter element">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-pleated-membrane.webp" alt="Microporous folded membrane filter element"><span class="tag">Membrane</span></div><div class="bd"><h3>Microporous folded membrane filter element</h3><div class="model">Pleated membrane series</div><button class="inq" data-prod="Microporous folded membrane filter element">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-cotton-wound.jpg" alt="Cotton wound filter cartridge"><span class="tag">Wound</span></div><div class="bd"><h3>Cotton wound filter cartridge</h3><div class="model">Cotton wound series · metal ends</div><button class="inq" data-prod="Cotton wound filter cartridge">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-hfu640.jpg" alt="Large flow filter element DY HFU640UY200J"><span class="tag">High flow</span></div><div class="bd"><h3>Large flow filter element</h3><div class="model">DY HFU640UY200J</div><button class="inq" data-prod="Large flow filter element DY HFU640UY200J">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-mff-pp.jpg" alt="Melt-blown large flow filter element DY MFF-OP-PP-5"><span class="tag">Melt-blown</span></div><div class="bd"><h3>Melt-blown large flow filter element</h3><div class="model">DY MFF-OP-PP-5</div><button class="inq" data-prod="Melt-blown large flow filter element DY MFF-OP-PP-5">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-duotov.jpg" alt="Natural gas filter element DY DUOTOV-90/559"><span class="tag">Natural gas</span></div><div class="bd"><h3>Natural gas filter element</h3><div class="model">DY DUOTOV-90/559</div><button class="inq" data-prod="Natural gas filter element DY DUOTOV-90/559">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-peco.jpg" alt="Natural gas filter element PECO PS-336-CC-10EB"><span class="tag">Natural gas</span></div><div class="bd"><h3>Natural gas filter element</h3><div class="model">PECO PS-336-CC-10EB</div><button class="inq" data-prod="Natural gas filter element PECO PS-336-CC-10EB">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-ps336.jpg" alt="Natural gas filter element DY PS336-CC-40LB"><span class="tag">Natural gas</span></div><div class="bd"><h3>Natural gas filter element</h3><div class="model">DY PS336-CC-40LB</div><button class="inq" data-prod="Natural gas filter element DY PS336-CC-40LB">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-ss-pleated.jpg" alt="Stainless steel pleated welded filter element"><span class="tag">Metal</span></div><div class="bd"><h3>Stainless steel pleated welded filter element</h3><div class="model">Stainless steel series</div><button class="inq" data-prod="Stainless steel pleated welded filter element">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-sintered-mesh.webp" alt="Sintered mesh filter element"><span class="tag">Sintered</span></div><div class="bd"><h3>Sintered mesh filter element</h3><div class="model">Sintered metal mesh series</div><button class="inq" data-prod="Sintered mesh filter element">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
+      <article class="prod-card rv"><div class="ph"><img src="assets/prod-rk060p.webp" alt="Natural gas filter element RK060P"><span class="tag">Natural gas</span></div><div class="bd"><h3>Natural gas filter element</h3><div class="model">RK060P</div><button class="inq" data-prod="Natural gas filter element RK060P">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
     </div>
   </div>
 </section>
@@ -428,21 +400,21 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
     <div class="split">
       <div class="about-media split-media rv">
         <img src="assets/about-plant.webp" alt="Xinxiang Da Yu Filtration Equipment Co., Ltd. factory">
-        <div class="chip"><b>8600m²</b><span data-i18n="Fully enclosed clean factory">Fully enclosed clean factory</span></div>
+        <div class="chip"><b>8600m²</b>Fully enclosed clean factory</div>
       </div>
       <div class="about-text rv">
-        <span class="overline" data-i18n="Who we are">Who we are</span>
-        <h2 data-i18n="Leading provider of custom industrial filtration solutions">Leading provider of custom industrial filtration solutions</h2>
-        <p data-i18n="XINXIANG DAYU FILTERING EQUIPMENT CO.,LTD is a well-known enterprise that provides filtration solutions. The company is committed to the development, consultation, and service of filtration technology in the field of water treatment, as well as the research and development, production, and sales of filters and filter elements.">XINXIANG DAYU FILTERING EQUIPMENT CO.,LTD is a well-known enterprise that provides filtration solutions. The company is committed to the development, consultation, and service of filtration technology in the field of water treatment, as well as the research and development, production, and sales of filters and filter elements.</p>
-        <p data-i18n="Our fully enclosed clean factory building, advanced production equipment and complete production processes — together with an innovative technical and R&D team — ensure the quality of every product that leaves our plant.">Our fully enclosed clean factory building, advanced production equipment and complete production processes — together with an innovative technical and R&D team — ensure the quality of every product that leaves our plant.</p>
+        <span class="overline">Who we are</span>
+        <h2>Leading provider of custom industrial filtration solutions</h2>
+        <p>XINXIANG DAYU FILTERING EQUIPMENT CO.,LTD is a well-known enterprise that provides filtration solutions. The company is committed to the development, consultation, and service of filtration technology in the field of water treatment, as well as the research and development, production, and sales of filters and filter elements.</p>
+        <p>Our fully enclosed clean factory building, advanced production equipment and complete production processes — together with an innovative technical and R&D team — ensure the quality of every product that leaves our plant.</p>
         <div class="about-points">
-          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h4 data-i18n="Authoritative qualifications">Authoritative qualifications</h4><p data-i18n="Certified ISO9000 for 9 consecutive years, High-tech Enterprise & IP management system certified.">Certified ISO9000 for 9 consecutive years, High-tech Enterprise &amp; IP management system certified.</p></div></div>
-          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M6 21V7l6-4 6 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span><div><h4 data-i18n="Standardized clean production">Standardized clean production</h4><p data-i18n="Closed clean workshop, advanced equipment and a professional R&D team guarantee stable product quality.">Closed clean workshop, advanced equipment and a professional R&D team guarantee stable product quality.</p></div></div>
-          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"/></svg></span><div><h4 data-i18n="Full range filter products">Full range filter products</h4><p data-i18n="Full series filter cartridges for water treatment, power plants, natural gas and sanitation vehicles.">Full series filter cartridges for water treatment, power plants, natural gas and sanitation vehicles.</p></div></div>
-          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v3M14 3v3M5 9h14M6 9v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/><path d="M10 13h4M10 17h4"/></svg></span><div><h4 data-i18n="Gas filtration R&D">Gas filtration R&amp;D</h4><p data-i18n="22 patents for gas coalescence and cyclone filters; mature custom solutions favored by global customers.">22 patents for gas coalescence and cyclone filters; mature custom solutions favored by global customers.</p></div></div>
+          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h4>Authoritative qualifications</h4><p>Certified ISO9000 for 9 consecutive years, High-tech Enterprise &amp; IP management system certified.</p></div></div>
+          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M6 21V7l6-4 6 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span><div><h4>Standardized clean production</h4><p>Closed clean workshop, advanced equipment and a professional R&D team guarantee stable product quality.</p></div></div>
+          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"/></svg></span><div><h4>Full range filter products</h4><p>Full series filter cartridges for water treatment, power plants, natural gas and sanitation vehicles.</p></div></div>
+          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v3M14 3v3M5 9h14M6 9v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/><path d="M10 13h4M10 17h4"/></svg></span><div><h4>Gas filtration R&amp;D</h4><p>22 patents for gas coalescence and cyclone filters; mature custom solutions favored by global customers.</p></div></div>
         </div>
         <div style="margin-top:36px">
-          <a class="btn btn-navy" href="https://www.dayufiltration.com/about-us/" target="_blank" rel="noopener"><span data-i18n="More about us">More about us</span>
+          <a class="btn btn-navy" href="https://www.dayufiltration.com/about-us/" target="_blank" rel="noopener">More about us
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
         </div>
@@ -459,13 +431,13 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
         <img src="assets/honor.webp" alt="Dayu qualification wall: ISO, SGS, FDA, CE certificates and utility model patents">
       </div>
       <div class="rv">
-        <span class="overline on-dark" data-i18n="Quality assurance">Quality assurance</span>
-        <h2 data-i18n="Qualification and honor">Qualification and honor</h2>
-        <p class="lead" style="color:#B9C9D9" data-i18n="We participate in market competition with high-quality products, reasonable prices and comprehensive after-sales service — sincerely welcoming customers to visit and cooperate with us.">We participate in market competition with high-quality products, reasonable prices and comprehensive after-sales service — sincerely welcoming customers to visit and cooperate with us.</p>
+        <span class="overline on-dark">Quality assurance</span>
+        <h2>Qualification and honor</h2>
+        <p class="lead" style="color:#B9C9D9">We participate in market competition with high-quality products, reasonable prices and comprehensive after-sales service — sincerely welcoming customers to visit and cooperate with us.</p>
         <div class="q-list">
-          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4 data-i18n="ISO9000 certified — 9 consecutive years">ISO9000 certified — 9 consecutive years</h4><p data-i18n="Sustained quality-management certification across a decade of manufacturing.">Sustained quality-management certification across a decade of manufacturing.</p></div></div>
-          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4 data-i18n="Intellectual property management system certified">Intellectual property management system certified</h4><p data-i18n="Certificate obtained in December 2020, protecting our proprietary manufacturing know-how.">Certificate obtained in December 2020, protecting our proprietary manufacturing know-how.</p></div></div>
-          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4 data-i18n="High-tech enterprise — Henan Province">High-tech enterprise — Henan Province</h4><p data-i18n="Title obtained in 2021 in recognition of sustained R&D investment and innovation.">Title obtained in 2021 in recognition of sustained R&amp;D investment and innovation.</p></div></div>
+          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4>ISO9000 certified — 9 consecutive years</h4><p>Sustained quality-management certification across a decade of manufacturing.</p></div></div>
+          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4>Intellectual property management system certified</h4><p>Certificate obtained in December 2020, protecting our proprietary manufacturing know-how.</p></div></div>
+          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4>High-tech enterprise — Henan Province</h4><p>Title obtained in 2021 in recognition of sustained R&amp;D investment and innovation.</p></div></div>
         </div>
         <div class="q-badges"><span>ISO</span><span>SGS</span><span>FDA</span><span>CE</span></div>
       </div>
@@ -478,24 +450,24 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
   <div class="container">
     <div class="sec-head rv">
       <div>
-        <span class="overline" data-i18n="Service support">Service support</span>
-        <h2 data-i18n="Professional service team for you">Professional service team for you</h2>
-        <p class="lead" data-i18n="We conduct in-depth communication to clarify your unique requirements and develop tailored solutions accordingly.">We conduct in-depth communication to clarify your unique requirements and develop tailored solutions accordingly.</p>
+        <span class="overline">Service support</span>
+        <h2>Professional service team for you</h2>
+        <p class="lead">We conduct in-depth communication to clarify your unique requirements and develop tailored solutions accordingly.</p>
       </div>
       <div class="right">
-        <a class="btn btn-navy" href="https://www.dayufiltration.com/services/" target="_blank" rel="noopener"><span data-i18n="View all services">View all services</span>
+        <a class="btn btn-navy" href="https://www.dayufiltration.com/services/" target="_blank" rel="noopener">View all services
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
     <div class="svc-grid">
-      <div class="svc-card rv"><span class="num">01</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h14v9H2zM16 11h3l3 3v3h-6z"/><circle cx="6" cy="19" r="1.8"/><circle cx="18" cy="19" r="1.8"/></svg><h3 data-i18n="Shipping service">Shipping service</h3><p data-i18n="Reliable global logistics with careful packaging, timely dispatch and full tracking from our plant to your site.">Reliable global logistics with careful packaging, timely dispatch and full tracking from our plant to your site.</p></div>
-      <div class="svc-card rv"><span class="num">02</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><h3 data-i18n="Quick response">Quick response</h3><p data-i18n="Fast replies to every inquiry, with clear technical clarification so your selection decisions are never delayed.">Fast replies to every inquiry, with clear technical clarification so your selection decisions are never delayed.</p></div>
-      <div class="svc-card rv"><span class="num">03</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a8 8 0 0 1 16 0"/><rect x="3" y="14" width="4" height="7" rx="1"/><rect x="17" y="14" width="4" height="7" rx="1"/><path d="M20 21v1M6 21v1M11 18h2"/></svg><h3 data-i18n="Technical support">Technical support</h3><p data-i18n="Application guidance from media selection to system integration, backed by our R&D and testing capability.">Application guidance from media selection to system integration, backed by our R&amp;D and testing capability.</p></div>
+      <div class="svc-card rv"><span class="num">01</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M2 8h14v9H2zM16 11h3l3 3v3h-6z"/><circle cx="6" cy="19" r="1.8"/><circle cx="18" cy="19" r="1.8"/></svg><h3>Shipping service</h3><p>Reliable global logistics with careful packaging, timely dispatch and full tracking from our plant to your site.</p></div>
+      <div class="svc-card rv"><span class="num">02</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg><h3>Quick response</h3><p>Fast replies to every inquiry, with clear technical clarification so your selection decisions are never delayed.</p></div>
+      <div class="svc-card rv"><span class="num">03</span><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14a8 8 0 0 1 16 0"/><rect x="3" y="14" width="4" height="7" rx="1"/><rect x="17" y="14" width="4" height="7" rx="1"/><path d="M20 21v1M6 21v1M11 18h2"/></svg><h3>Technical support</h3><p>Application guidance from media selection to system integration, backed by our R&amp;D and testing capability.</p></div>
     </div>
     <div class="samples rv">
-      <p><b data-i18n="Free samples">Free samples</b> <span data-i18n="Free samples are available for your validation — so you can confirm that product quality, performance and reliability fully meet your expectations before you commit.">are available for your validation — so you can confirm that product quality, performance and reliability fully meet your expectations before you commit.</span></p>
-      <a class="btn btn-primary" href="#contact"><span data-i18n="Request free samples">Request free samples</span>
+      <p><b>Free samples</b> are available for your validation — so you can confirm that product quality, performance and reliability fully meet your expectations before you commit.</p>
+      <a class="btn btn-primary" href="#contact">Request free samples
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </div>
@@ -507,35 +479,35 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
   <div class="container">
     <div class="sec-head rv">
       <div>
-        <span class="overline" data-i18n="Industries we serve">Industries we serve</span>
-        <h2 data-i18n="One-stop solution for industry filtering">One-stop solution for industry filtering</h2>
-        <p class="lead" data-i18n="We are committed to facilitating refined production and sustainable development across industries.">We are committed to facilitating refined production and sustainable development across industries.</p>
+        <span class="overline">Industries we serve</span>
+        <h2>One-stop solution for industry filtering</h2>
+        <p class="lead">We are committed to facilitating refined production and sustainable development across industries.</p>
       </div>
     </div>
     <div class="ind-grid">
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.5 3-3.5 5-3.5 8.5a3.5 3.5 0 0 0 7 0C15.5 8 12 7.5 12 3z"/><path d="M12 15.5V21"/></svg></span>
-        <h3 data-i18n="Natural gas industry">Natural gas industry</h3>
-        <ul><li data-i18n="Protect equipment">Protect equipment</li><li data-i18n="Stable gas supply conditions">Stable gas supply conditions</li><li data-i18n="Improve the safety factor">Improve the safety factor</li><li data-i18n="Purify gas source quality">Purify gas source quality</li><li data-i18n="Reduce operating losses">Reduce operating losses</li></ul>
-        <a class="text-link more" href="#contact"><span data-i18n="Free quote now">Free quote now</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <h3>Natural gas industry</h3>
+        <ul><li>Protect equipment</li><li>Stable gas supply conditions</li><li>Improve the safety factor</li><li>Purify gas source quality</li><li>Reduce operating losses</li></ul>
+        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L5 14h6l-1 8 8-12h-6l1-8z"/></svg></span>
-        <h3 data-i18n="Electric power industry">Electric power industry</h3>
-        <ul><li data-i18n="Protect core unit equipment">Protect core unit equipment</li><li data-i18n="Ensure stable and safe unit operation">Ensure stable and safe unit operation</li><li data-i18n="Improve generation efficiency, reduce accumulated energy loss">Improve generation efficiency, reduce accumulated energy loss</li><li data-i18n="Reduce O&M costs and downtime losses">Reduce O&amp;M costs and downtime losses</li><li data-i18n="Environmental compliance">Environmental compliance</li><li data-i18n="Adapt to new electric tracks">Adapt to new electric tracks</li></ul>
-        <a class="text-link more" href="#contact"><span data-i18n="Free quote now">Free quote now</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <h3>Electric power industry</h3>
+        <ul><li>Protect core unit equipment</li><li>Ensure stable and safe unit operation</li><li>Improve generation efficiency, reduce accumulated energy loss</li><li>Reduce O&amp;M costs and downtime losses</li><li>Environmental compliance</li><li>Adapt to new electric tracks</li></ul>
+        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
-        <h3 data-i18n="Industrial water treatment">Industrial water treatment</h3>
-        <ul><li data-i18n="Intercept solid impurities, protect back-end equipment">Intercept solid impurities, protect back-end equipment</li><li data-i18n="Stabilize water quality to production standards">Stabilize water quality to production standards</li><li data-i18n="Improve water treatment process efficiency">Improve water treatment process efficiency</li><li data-i18n="Inhibit corrosion, scaling and microbial growth">Inhibit corrosion, scaling and microbial growth</li><li data-i18n="Promote wastewater reuse and environmental discharge">Promote wastewater reuse and environmental discharge</li><li data-i18n="Reduce O&M costs and downtime losses">Reduce O&amp;M and downtime losses</li></ul>
-        <a class="text-link more" href="#contact"><span data-i18n="Free quote now">Free quote now</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <h3>Industrial water treatment</h3>
+        <ul><li>Intercept solid impurities, protect back-end equipment</li><li>Stabilize water quality to production standards</li><li>Improve water treatment process efficiency</li><li>Inhibit corrosion, scaling and microbial growth</li><li>Promote wastewater reuse and environmental discharge</li><li>Reduce O&amp;M and downtime losses</li></ul>
+        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v2h-1v2h5v2h-1v10h1v2H4v-2h1V9H4V7h5V5H8V3z"/><path d="M10 13h4M10 17h4"/></svg></span>
-        <h3 data-i18n="Petrochemical industry">Petrochemical industry</h3>
-        <ul><li data-i18n="Protect refining, chemical and mining equipment">Protect refining, chemical and mining equipment</li><li data-i18n="Stabilize process, improve product quality">Stabilize process, improve product quality</li><li data-i18n="Reduce flammable and explosive safety risks">Reduce flammable and explosive safety risks</li><li data-i18n="Cut auxiliary material energy consumption and O&M expense">Cut auxiliary material energy consumption and O&amp;M expense</li><li data-i18n="Help emissions meet environmental standards">Help emissions meet environmental standards</li><li data-i18n="Adapt to the entire petrochemical chain">Adapt to the entire petrochemical chain</li></ul>
-        <a class="text-link more" href="#contact"><span data-i18n="Free quote now">Free quote now</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <h3>Petrochemical industry</h3>
+        <ul><li>Protect refining, chemical and mining equipment</li><li>Stabilize process, improve product quality</li><li>Reduce flammable and explosive safety risks</li><li>Cut auxiliary material energy consumption and O&amp;M expense</li><li>Help emissions meet environmental standards</li><li>Adapt to the entire petrochemical chain</li></ul>
+        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       </div>
     </div>
   </div>
@@ -546,23 +518,23 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
   <div class="container">
     <div class="sec-head rv">
       <div>
-        <span class="overline" data-i18n="Our news">Our news</span>
-        <h2 data-i18n="Industry news & insights">Industry news &amp; insights</h2>
-        <p class="lead" data-i18n="Company updates, application knowledge and industry outlook from the Dayu team.">Company updates, application knowledge and industry outlook from the Dayu team.</p>
+        <span class="overline">Our news</span>
+        <h2>Industry news &amp; insights</h2>
+        <p class="lead">Company updates, application knowledge and industry outlook from the Dayu team.</p>
       </div>
       <div class="right">
-        <a class="btn btn-navy" href="https://www.dayufiltration.com/category/news/" target="_blank" rel="noopener"><span data-i18n="View all news">View all news</span>
+        <a class="btn btn-navy" href="https://www.dayufiltration.com/category/news/" target="_blank" rel="noopener">View all news
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
       </div>
     </div>
     <div class="news-grid">
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><span data-i18n="September 23, 2026">September 23, 2026</span></span><h3 data-i18n="Upholding the Spirit of Craftsmanship, Building a Better Future!">Upholding the Spirit of Craftsmanship, Building a Better Future!</h3><a class="more" href="https://www.dayufiltration.com/upholding-the-spirit-of-craftsmanship-building-a-better-future/" target="_blank" rel="noopener"><span data-i18n="Read more">Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><span data-i18n="September 19, 2026">September 19, 2026</span></span><h3 data-i18n="Outlook on New Water Treatment Technologies">Outlook on New Water Treatment Technologies</h3><a class="more" href="https://www.dayufiltration.com/outlook-on-new-water-treatment-technologies/" target="_blank" rel="noopener"><span data-i18n="Read more">Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><span data-i18n="September 9, 2026">September 9, 2026</span></span><h3 data-i18n='Why does the manual specify 1016 mm while the actual measurement is 1040 mm? Unraveling the "size mystery" of high-flow filter cartridges.'>Why does the manual specify 1016 mm while the actual measurement is 1040 mm? Unraveling the "size mystery" of high-flow filter cartridges.</h3><a class="more" href="https://www.dayufiltration.com/why-does-the-manual-specify-1016-mm-while-the-actual-measurement-is-1040-mm-unraveling-the-size-mystery-of-high-flow-filter-cartridges-and-a-guide-to-selection/" target="_blank" rel="noopener"><span data-i18n="Read more">Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><span data-i18n="July 13, 2026">July 13, 2026</span></span><h3 data-i18n="80th Anniversary of the Victory in the War of Resistance Against Japanese Aggression: Remembering History, Building Shared Conviction">80th Anniversary of the Victory in the War of Resistance Against Japanese Aggression: Remembering History, Building Shared Conviction</h3><a class="more" href="https://www.dayufiltration.com/80th-anniversary-of-the-victory-in-the-war-of-resistance-against-japanese-aggression-remembering-history-building-shared-conviction/" target="_blank" rel="noopener"><span data-i18n="Read more">Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><span data-i18n="October 9, 2025">October 9, 2025</span></span><h3 data-i18n="Instructions for Use of Gas Engine Filter Cartridges">Instructions for Use of Gas Engine Filter Cartridges</h3><a class="more" href="https://www.dayufiltration.com/instructions-for-use-of-gas-engine-filter-cartridges/" target="_blank" rel="noopener"><span data-i18n="Read more">Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg><span data-i18n="September 26, 2025">September 26, 2025</span></span><h3 data-i18n="National Day Tribute: Forging the Spirit Through Light and Shadow">National Day Tribute: Forging the Spirit Through Light and Shadow</h3><a class="more" href="https://www.dayufiltration.com/national-day-tribute-forging-the-spirit-through-light-and-shadow-2/" target="_blank" rel="noopener"><span data-i18n="Read more">Read more</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 23, 2026</span><h3>Upholding the Spirit of Craftsmanship, Building a Better Future!</h3><a class="more" href="https://www.dayufiltration.com/upholding-the-spirit-of-craftsmanship-building-a-better-future/" target="_blank" rel="noopener">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 19, 2026</span><h3>Outlook on New Water Treatment Technologies</h3><a class="more" href="https://www.dayufiltration.com/outlook-on-new-water-treatment-technologies/" target="_blank" rel="noopener">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 9, 2026</span><h3>Why does the manual specify 1016 mm while the actual measurement is 1040 mm? Unraveling the "size mystery" of high-flow filter cartridges.</h3><a class="more" href="https://www.dayufiltration.com/why-does-the-manual-specify-1016-mm-while-the-actual-measurement-is-1040-mm-unraveling-the-size-mystery-of-high-flow-filter-cartridges-and-a-guide-to-selection/" target="_blank" rel="noopener">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>July 13, 2026</span><h3>80th Anniversary of the Victory in the War of Resistance Against Japanese Aggression: Remembering History, Building Shared Conviction</h3><a class="more" href="https://www.dayufiltration.com/80th-anniversary-of-the-victory-in-the-war-of-resistance-against-japanese-aggression-remembering-history-building-shared-conviction/" target="_blank" rel="noopener">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>October 9, 2025</span><h3>Instructions for Use of Gas Engine Filter Cartridges</h3><a class="more" href="https://www.dayufiltration.com/instructions-for-use-of-gas-engine-filter-cartridges/" target="_blank" rel="noopener">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 26, 2025</span><h3>National Day Tribute: Forging the Spirit Through Light and Shadow</h3><a class="more" href="https://www.dayufiltration.com/national-day-tribute-forging-the-spirit-through-light-and-shadow-2/" target="_blank" rel="noopener">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
     </div>
   </div>
 </section>
@@ -571,33 +543,33 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
 <section class="section contact" id="contact">
   <div class="container">
     <div class="contact-left rv">
-      <span class="overline on-dark" data-i18n="Contact us">Contact us</span>
-      <h2 data-i18n="Ready to find your filtration solution?">Ready to find your filtration solution?</h2>
-      <p data-i18n="Tell us about your application — gas, liquid or oil — and our engineers will work out the right media, size and configuration. We reply within 24 hours.">Tell us about your application — gas, liquid or oil — and our engineers will work out the right media, size and configuration. We reply within 24 hours.</p>
+      <span class="overline on-dark">Contact us</span>
+      <h2>Ready to find your filtration solution?</h2>
+      <p>Tell us about your application — gas, liquid or oil — and our engineers will work out the right media, size and configuration. We reply within 24 hours.</p>
       <div class="contact-meta">
         <a href="tel:+863733870511"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>+86 373-3870511</a>
         <a href="https://wa.me/8616627762153" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 .5"/></svg>WhatsApp +86 16627762153</a>
         <a href="mailto:xxdayu22@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>xxdayu22@gmail.com</a>
-        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><span data-i18n="Xinxiang City, Henan Province, China">Xinxiang City, Henan Province, China</span></div>
+        <div><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Xinxiang City, Henan Province, China</div>
       </div>
     </div>
     <div class="form-card rv">
-      <h3 data-i18n="Send us an inquiry">Send us an inquiry</h3>
-      <p class="fsub" data-i18n="Fields marked * are required. We will reply within 24 hours.">Fields marked * are required. We will reply within 24 hours.</p>
+      <h3>Send us an inquiry</h3>
+      <p class="fsub">Fields marked * are required. We will reply within 24 hours.</p>
       <form id="inquiryForm" novalidate>
         <div class="f-row">
-          <div class="f-field"><label for="fName" data-i18n="Name">Name</label><input id="fName" name="name" type="text" placeholder="Enter your name..." autocomplete="name" data-i18n-ph="Enter your name..."></div>
-          <div class="f-field"><label for="fEmail" data-i18n="Email">Email <i>*</i></label><input id="fEmail" name="email" type="email" required placeholder="Enter your email..." autocomplete="email" data-i18n-ph="Enter your email..."></div>
+          <div class="f-field"><label for="fName">Name</label><input id="fName" name="name" type="text" placeholder="Enter your name..." autocomplete="name"></div>
+          <div class="f-field"><label for="fEmail">Email <i>*</i></label><input id="fEmail" name="email" type="email" required placeholder="Enter your email..." autocomplete="email"></div>
         </div>
         <div class="f-row">
-          <div class="f-field"><label for="fTel" data-i18n="Phone / WhatsApp">Phone / WhatsApp</label><input id="fTel" name="tel" type="tel" placeholder="Enter your number..." autocomplete="tel" data-i18n-ph="Enter your number..."></div>
-          <div class="f-field"><label for="fCountry" data-i18n="Country / Region">Country / Region</label><input id="fCountry" name="country" type="text" placeholder="Enter your location..." data-i18n-ph="Enter your location..."></div>
+          <div class="f-field"><label for="fTel">Phone / WhatsApp</label><input id="fTel" name="tel" type="tel" placeholder="Enter your number..." autocomplete="tel"></div>
+          <div class="f-field"><label for="fCountry">Country / Region</label><input id="fCountry" name="country" type="text" placeholder="Enter your location..."></div>
         </div>
-        <div class="f-field"><label for="fMsg" data-i18n="Message">Message <i>*</i></label><textarea id="fMsg" name="message" required placeholder="To better assist you, please describe how we can help..." data-i18n-ph="To better assist you, please describe how we can help..."></textarea></div>
-        <button class="btn btn-primary" type="submit"><span data-i18n="Submit inquiry">Submit inquiry</span>
+        <div class="f-field"><label for="fMsg">Message <i>*</i></label><textarea id="fMsg" name="message" required placeholder="To better assist you, please describe how we can help..."></textarea></div>
+        <button class="btn btn-primary" type="submit">Submit inquiry
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </button>
-        <p class="form-note" data-i18n="This static page prepares your inquiry as an email to our sales team. On sites deployed with a form backend, submissions are sent automatically.">This static page prepares your inquiry as an email to our sales team. On sites deployed with a form backend, submissions are sent automatically.</p>
+        <p class="form-note">This static page prepares your inquiry as an email to our sales team. On sites deployed with a form backend, submissions are sent automatically.</p>
       </form>
     </div>
   </div>
@@ -612,41 +584,41 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
           <img src="assets/dy-logo.webp" alt="DAYU FILTER logo">
           <span class="brand-name">DAYU <span style="color:var(--signal)">FILTER</span></span>
         </a>
-        <p class="blurb" data-i18n="Xinxiang Da Yu Filtration Equipment Co., Ltd. — an ISO9000-certified manufacturer of filtration equipment and cartridges, serving natural gas, electric power, water treatment and petrochemical industries worldwide.">Xinxiang Da Yu Filtration Equipment Co., Ltd. — an ISO9000-certified manufacturer of filtration equipment and cartridges, serving natural gas, electric power, water treatment and petrochemical industries worldwide.</p>
+        <p class="blurb">Xinxiang Da Yu Filtration Equipment Co., Ltd. — an ISO9000-certified manufacturer of filtration equipment and cartridges, serving natural gas, electric power, water treatment and petrochemical industries worldwide.</p>
       </div>
       <div>
-        <h4 data-i18n="Explore">Explore</h4>
+        <h4>Explore</h4>
         <ul>
-          <li><a href="#products" data-i18n="Products">Products</a></li>
-          <li><a href="#about" data-i18n="About us">About us</a></li>
-          <li><a href="#quality" data-i18n="Quality assurance">Quality assurance</a></li>
-          <li><a href="#services" data-i18n="Services">Services</a></li>
-          <li><a href="#news" data-i18n="News">News</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#quality">Quality assurance</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#news">News</a></li>
         </ul>
       </div>
       <div>
-        <h4 data-i18n="Industries">Industries</h4>
+        <h4>Industries</h4>
         <ul>
-          <li><a href="#industries" data-i18n="Natural gas">Natural gas</a></li>
-          <li><a href="#industries" data-i18n="Electric power">Electric power</a></li>
-          <li><a href="#industries" data-i18n="Industrial water treatment">Industrial water treatment</a></li>
-          <li><a href="#industries" data-i18n="Petrochemical">Petrochemical</a></li>
-          <li><a href="https://www.dayufiltration.com/" target="_blank" rel="noopener" data-i18n="Official website">Official website</a></li>
+          <li><a href="#industries">Natural gas</a></li>
+          <li><a href="#industries">Electric power</a></li>
+          <li><a href="#industries">Industrial water treatment</a></li>
+          <li><a href="#industries">Petrochemical</a></li>
+          <li><a href="https://www.dayufiltration.com/" target="_blank" rel="noopener">Official website</a></li>
         </ul>
       </div>
       <div>
-        <h4 data-i18n="Contact">Contact</h4>
+        <h4>Contact</h4>
         <ul class="f-contact">
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><a href="tel:+863733870511">+86 373-3870511</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z"/><path d="M9 9.5c.5 2.5 3 5 5.5 5.5l1-1.5 2 .5"/></svg><a href="https://wa.me/8616627762153" target="_blank" rel="noopener">+86 16627762153</a></li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><a href="mailto:xxdayu22@gmail.com">xxdayu22@gmail.com</a></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><span data-i18n="Xinxiang, Henan, China">Xinxiang, Henan, China</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>Xinxiang, Henan, China</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span data-i18n="© 2026 Xinxiang Da Yu Filtration Equipment Co., Ltd. All rights reserved.">© 2026 Xinxiang Da Yu Filtration Equipment Co., Ltd. All rights reserved.</span>
-      <span data-i18n="Filtration solutions for gas, liquid and oil.">Filtration solutions for gas, liquid and oil.</span>
+      <span>© 2026 Xinxiang Da Yu Filtration Equipment Co., Ltd. All rights reserved.</span>
+      <span>Filtration solutions for gas, liquid and oil.</span>
     </div>
   </div>
 </footer>
@@ -657,223 +629,6 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
 (function(){
   "use strict";
   var prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  /* ===== Language switch: English (default) / Arabic ===== */
-  var AR = {
-    "Filtration Equipment Co., Ltd.": "شركة معدات الترشيح المحدودة",
-    "Products": "المنتجات",
-    "About": "من نحن",
-    "Quality": "الجودة",
-    "Services": "الخدمات",
-    "Industries": "القطاعات",
-    "News": "الأخبار",
-    "Get a quote": "اطلب عرض سعر",
-    "Developing the spirit of craftsmanship": "تطوير روح الإتقان الحرفي",
-    "Building the": "نبني علامة",
-    "Dayu brand": "داييو التجارية",
-    "Filtration technology · R&D · production · sales": "تقنيات الترشيح · البحث والتطوير · الإنتاج · المبيعات",
-    "Dedicated to the development of filtration technology, R&D, production and sales in the field of gas, liquid and oil — providing you with professional filtration solutions.": "متخصصون في تطوير تقنيات الترشيح والبحث والتطوير والإنتاج والمبيعات في مجالات الغاز والسوائل والزيوت، لنقدم لكم حلول ترشيح احترافية.",
-    "View our products": "عرض منتجاتنا",
-    "Get a free quote": "اطلب عرض سعر مجانًا",
-    "Factory area": "مساحة المصنع",
-    "Years of production experience": "سنوات الخبرة الإنتاجية",
-    "Patent certificates": "شهادات براءات الاختراع",
-    "Years in natural gas cartridges": "عامًا في فلاتر الغاز الطبيعي",
-    "R&D · Manufacturing · Service as a whole": "البحث والتطوير · التصنيع · الخدمة المتكاملة",
-    "From the nanometer to the millimeter": "من النانومتر إلى المليمتر",
-    "Sixteen years of experience in manufacturing natural gas cartridges. Every scale of filtration — from the finest nanometer-level coalescence to millimeter-stage protection — is where we extend our excellence.": "ستة عشر عامًا من الخبرة في تصنيع فلاتر الغاز الطبيعي. في كل مقياس من مقاييس الترشيح — من أدق دمج على مستوى النانومتر إلى الحماية على مستوى المليمتر — نُبرز فيه تميزنا.",
-    "We are a comprehensive enterprise that develops, manufactures and sells all kinds of filtration equipment and cartridges, with strong technical force, exquisite production technology, and complete processing and testing means.": "نحن مؤسسة متكاملة تعمل على تطوير وتصنيع وبيع جميع أنواع معدات الترشيح والفلاتر، بقوة تقنية عالية وتقنيات إنتاج دقيقة وأجهزة معالجة واختبار متكاملة.",
-    "Explore the range": "استكشف المجموعة",
-    "Main products": "المنتجات الرئيسية",
-    "Shop our best-selling products": "تسوّق منتجاتنا الأكثر مبيعًا",
-    "Complete products and specifications provide customers with systematic filtration solutions.": "منتجات ومواصفات كاملة تقدم للعملاء حلول ترشيح منهجية.",
-    "View all products": "عرض جميع المنتجات",
-    "Wound": "لف",
-    "Fiber": "ألياف",
-    "Membrane": "غشاء",
-    "High flow": "تدفق كبير",
-    "Melt-blown": "منصهر",
-    "Natural gas": "غاز طبيعي",
-    "Metal": "معدن",
-    "Sintered": "ملبد",
-    "PP wire winding filter element": "فلتر لف الأسلاك PP",
-    "Glass fiber filter element": "فلتر الألياف الزجاجية",
-    "Microporous folded membrane filter element": "فلتر الغشاء المطوي ذو المسام الدقيقة",
-    "Cotton wound filter cartridge": "خرطوشة فلتر القطن الملفوف",
-    "Large flow filter element": "فلتر التدفق الكبير",
-    "Melt-blown large flow filter element": "فلتر التدفق الكبير المنصهر",
-    "Natural gas filter element": "فلتر الغاز الطبيعي",
-    "Stainless steel pleated welded filter element": "فلتر الفولاذ المقاوم للصدأ المطوي الملحوم",
-    "Sintered mesh filter element": "فلتر الشبكة المعدنية الملبد",
-    "Depth wound series · 20\"–40\"": "سلسلة اللف العميق · 20–40 بوصة",
-    "Fiber wound series · metal fittings": "سلسلة لف الألياف · تجهيزات معدنية",
-    "Pleated membrane series": "سلسلة الغشاء المطوي",
-    "Cotton wound series · metal ends": "سلسلة القطن الملفوف · أطراف معدنية",
-    "Stainless steel series": "سلسلة الفولاذ المقاوم للصدأ",
-    "Sintered metal mesh series": "سلسلة الشبكة المعدنية الملبد",
-    "Send inquiry": "أرسل استفسارًا",
-    "Fully enclosed clean factory": "مصنع نظيف مغلق بالكامل",
-    "Who we are": "من نحن",
-    "Leading provider of custom industrial filtration solutions": "المزود الرائد لحلول الترشيح الصناعية المخصصة",
-    "XINXIANG DAYU FILTERING EQUIPMENT CO.,LTD is a well-known enterprise that provides filtration solutions. The company is committed to the development, consultation, and service of filtration technology in the field of water treatment, as well as the research and development, production, and sales of filters and filter elements.": "شركة شينشيانغ داييو لمعدات الترشيح المحدودة هي مؤسسة معروفة تقدم حلول الترشيح، وتلتزم بتطوير تقنيات الترشيح والاستشارات والخدمات في مجال معالجة المياه، بالإضافة إلى البحث والتطوير والإنتاج والبيع للفلاتر وعناصر الترشيح.",
-    "Our fully enclosed clean factory building, advanced production equipment and complete production processes — together with an innovative technical and R&D team — ensure the quality of every product that leaves our plant.": "تضمن مباني المصنع النظيفة المغلقة بالكامل ومعدات الإنتاج المتقدمة وعمليات الإنتاج الكاملة — إلى جانب فريق تقني وبحث مبتكر — جودة كل منتج يخرج من مصنعنا.",
-    "Authoritative qualifications": "مؤهلات موثوقة",
-    "Certified ISO9000 for 9 consecutive years, High-tech Enterprise & IP management system certified.": "حاصلون على شهادة ISO9000 لمدة 9 سنوات متتالية، ومؤسسة تكنولوجيا فائقة معتمدة بنظام إدارة الملكية الفكرية.",
-    "Standardized clean production": "إنتاج نظيف موحّد",
-    "Closed clean workshop, advanced equipment and a professional R&D team guarantee stable product quality.": "ورشة نظيفة مغلقة ومعدات متقدمة وفريق بحث وتطوير محترف يضمنون جودة منتجات مستقرة.",
-    "Full range filter products": "مجموعة كاملة من منتجات الترشيح",
-    "Full series filter cartridges for water treatment, power plants, natural gas and sanitation vehicles.": "سلسلة كاملة من فلاتر معالجة المياه ومحطات الطاقة والغاز الطبيعي ومركبات النظافة.",
-    "Gas filtration R&D": "البحث والتطوير في ترشيح الغاز",
-    "22 patents for gas coalescence and cyclone filters; mature custom solutions favored by global customers.": "22 براءة اختراع لفلاتر الدمج والإعصار للغاز؛ وحلول مخصصة ناضجة يفضلها عملاء العالم.",
-    "More about us": "المزيد عنا",
-    "Quality assurance": "ضمان الجودة",
-    "Qualification and honor": "المؤهلات والجوائز",
-    "We participate in market competition with high-quality products, reasonable prices and comprehensive after-sales service — sincerely welcoming customers to visit and cooperate with us.": "ننافس في السوق بمنتجات عالية الجودة وأسعار معقولة وخدمة ما بعد البيع شاملة، ونرحب بزيارة العملاء والتعاون معنا.",
-    "ISO9000 certified — 9 consecutive years": "شهادة ISO9000 — 9 سنوات متتالية",
-    "Sustained quality-management certification across a decade of manufacturing.": "اعتماد مستمر لنظام إدارة الجودة على مدى عقد من التصنيع.",
-    "Intellectual property management system certified": "نظام إدارة الملكية الفكرية معتمد",
-    "Certificate obtained in December 2020, protecting our proprietary manufacturing know-how.": "شهادة حصلنا عليها في ديسمبر 2020 لحماية خبراتنا التصنيعية الخاصة.",
-    "High-tech enterprise — Henan Province": "مؤسسة التكنولوجيا الفائقة — مقاطعة خنان",
-    "Title obtained in 2021 in recognition of sustained R&D investment and innovation.": "لقب حصلنا عليه في 2021 تقديرًا لاستثمارنا المتواصل في البحث والتطوير والابتكار.",
-    "Service support": "دعم الخدمات",
-    "Professional service team for you": "فريق خدمة احترافي لأجلك",
-    "We conduct in-depth communication to clarify your unique requirements and develop tailored solutions accordingly.": "نجري تواصلًا معمقًا لتوضيح متطلباتكم الفريدة وتطوير حلول مخصصة وفقًا لذلك.",
-    "View all services": "عرض جميع الخدمات",
-    "Shipping service": "خدمة الشحن",
-    "Reliable global logistics with careful packaging, timely dispatch and full tracking from our plant to your site.": "لوجستيات عالمية موثوقة بتغليف دقيق وشحن في الوقت المناسب وتتبع كامل من مصنعنا إلى موقعكم.",
-    "Quick response": "استجابة سريعة",
-    "Fast replies to every inquiry, with clear technical clarification so your selection decisions are never delayed.": "ردود سريعة على كل استفسار مع توضيح تقني واضح حتى لا تتأخر قرارات اختياركم أبدًا.",
-    "Technical support": "الدعم الفني",
-    "Application guidance from media selection to system integration, backed by our R&D and testing capability.": "إرشاد تطبيقي من اختيار الوسيط إلى تكامل الأنظمة، مدعوم بقدراتنا في البحث والتطوير والاختبار.",
-    "Free samples": "عينات مجانية",
-    "Free samples are available for your validation — so you can confirm that product quality, performance and reliability fully meet your expectations before you commit.": "عينات مجانية متاحة للتجربة — لتتأكدوا من أن جودة المنتج وأداءه وموثوقيته تلبي توقعاتكم قبل الالتزام.",
-    "Request free samples": "اطلب عينات مجانية",
-    "Industries we serve": "القطاعات التي نخدمها",
-    "One-stop solution for industry filtering": "حل متكامل لترشيح القطاعات الصناعية",
-    "We are committed to facilitating refined production and sustainable development across industries.": "نلتزم بتسهيل الإنتاج الدقيق والتنمية المستدامة عبر القطاعات الصناعية.",
-    "Natural gas industry": "قطاع الغاز الطبيعي",
-    "Protect equipment": "حماية المعدات",
-    "Stable gas supply conditions": "ظروف إمداد غاز مستقرة",
-    "Improve the safety factor": "رفع عامل الأمان",
-    "Purify gas source quality": "تنقية جودة مصدر الغاز",
-    "Reduce operating losses": "تقليل خسائر التشغيل",
-    "Electric power industry": "قطاع الطاقة الكهربائية",
-    "Electric power": "الطاقة الكهربائية",
-    "Protect core unit equipment": "حماية معدات الوحدات الأساسية",
-    "Ensure stable and safe unit operation": "ضمان تشغيل مستقر وآمن للوحدات",
-    "Improve generation efficiency, reduce accumulated energy loss": "رفع كفاءة التوليد وتقليل فقد الطاقة المتراكم",
-    "Reduce O&M costs and downtime losses": "تقليل تكاليف التشغيل والصيانة وخسائر التوقف",
-    "Environmental compliance": "الامتثال البيئي",
-    "Adapt to new electric tracks": "التكيف مع مسارات الكهرباء الجديدة",
-    "Industrial water treatment": "معالجة المياه الصناعية",
-    "Intercept solid impurities, protect back-end equipment": "اعتراض الشوائب الصلبة وحماية معدات المراحل اللاحقة",
-    "Stabilize water quality to production standards": "تثبيت جودة المياه وفق معايير الإنتاج",
-    "Improve water treatment process efficiency": "رفع كفاءة عمليات معالجة المياه",
-    "Inhibit corrosion, scaling and microbial growth": "تثبيط التآكل والترسبات ونمو الميكروبات",
-    "Promote wastewater reuse and environmental discharge": "تعزيز إعادة استخدام المياه المعالجة وتصريفها بيئيًا",
-    "Petrochemical industry": "قطاع البتروكيماويات",
-    "Petrochemical": "البتروكيماويات",
-    "Protect refining, chemical and mining equipment": "حماية معدات التكرير والكيماويات والتعدين",
-    "Stabilize process, improve product quality": "تثبيت العمليات وتحسين جودة المنتجات",
-    "Reduce flammable and explosive safety risks": "تقليل مخاطر الاشتعال والانفجار",
-    "Cut auxiliary material energy consumption and O&M expense": "خفض استهلاك الطاقة للمواد المساعدة ونفقات التشغيل",
-    "Help emissions meet environmental standards": "مساعدة الانبعاثات على تلبية المعايير البيئية",
-    "Adapt to the entire petrochemical chain": "التكيف مع سلسلة البتروكيماويات بأكملها",
-    "Free quote now": "اطلب عرض سعر الآن",
-    "Our news": "أخبارنا",
-    "Industry news & insights": "أخبار القطاع والرؤى",
-    "Company updates, application knowledge and industry outlook from the Dayu team.": "مستجدات الشركة ومعرفة التطبيقات ونظرة القطاع من فريق داييو.",
-    "View all news": "عرض جميع الأخبار",
-    "September 23, 2026": "23 سبتمبر 2026",
-    "September 19, 2026": "19 سبتمبر 2026",
-    "September 9, 2026": "9 سبتمبر 2026",
-    "July 13, 2026": "13 يوليو 2026",
-    "October 9, 2025": "9 أكتوبر 2025",
-    "September 26, 2025": "26 سبتمبر 2025",
-    "Upholding the Spirit of Craftsmanship, Building a Better Future!": "التمسك بروح الإتقان الحرفي، وبناء مستقبل أفضل!",
-    "Outlook on New Water Treatment Technologies": "نظرة على تقنيات معالجة المياه الجديدة",
-    "Why does the manual specify 1016 mm while the actual measurement is 1040 mm? Unraveling the \"size mystery\" of high-flow filter cartridges.": "لماذا يذكر الدليل 1016 ملم بينما القياس الفعلي 1040 ملم؟ كشف \"لغز المقاسات\" لفلاتر التدفق الكبير.",
-    "80th Anniversary of the Victory in the War of Resistance Against Japanese Aggression: Remembering History, Building Shared Conviction": "الذكرى الثمانون لانتصار حرب المقاومة ضد العدوان الياباني: تذكّر التاريخ وبناء الإيمان المشترك",
-    "Instructions for Use of Gas Engine Filter Cartridges": "إرشادات استخدام فلاتر محركات الغاز",
-    "National Day Tribute: Forging the Spirit Through Light and Shadow": "تكريم اليوم الوطني: صياغة الروح عبر الضوء والظل",
-    "Read more": "اقرأ المزيد",
-    "Contact us": "تواصل معنا",
-    "Ready to find your filtration solution?": "جاهزون لإيجاد حل الترشيح الخاص بكم؟",
-    "Tell us about your application — gas, liquid or oil — and our engineers will work out the right media, size and configuration. We reply within 24 hours.": "أخبرنا عن تطبيقك — غاز أو سائل أو زيت — وسيحدد مهندسونا الوسيط والحجم والتهيئة المناسبة. نرد خلال 24 ساعة.",
-    "Xinxiang City, Henan Province, China": "مدينة شينشيانغ، مقاطعة خنان، الصين",
-    "Send us an inquiry": "أرسل لنا استفسارًا",
-    "Fields marked * are required. We will reply within 24 hours.": "الحقول المميزة بـ * إلزامية. سنرد خلال 24 ساعة.",
-    "Name": "الاسم",
-    "Email": "البريد الإلكتروني",
-    "Phone / WhatsApp": "الهاتف / واتساب",
-    "Country / Region": "الدولة / المنطقة",
-    "Message": "الرسالة",
-    "Enter your name...": "أدخل اسمك...",
-    "Enter your email...": "أدخل بريدك الإلكتروني...",
-    "Enter your number...": "أدخل رقمك...",
-    "Enter your location...": "أدخل موقعك...",
-    "To better assist you, please describe how we can help...": "لتتم مساعدتك بشكل أفضل، يرجى وصف كيف يمكننا المساعدة...",
-    "Submit inquiry": "إرسال الاستفسار",
-    "This static page prepares your inquiry as an email to our sales team. On sites deployed with a form backend, submissions are sent automatically.": "تُجهّز هذه الصفحة الثابتة استفسارك كرسالة بريد إلى فريق المبيعات. في المواقع المزودة بنظام نماذج، تُرسل الطلبات تلقائيًا.",
-    "Xinxiang Da Yu Filtration Equipment Co., Ltd. — an ISO9000-certified manufacturer of filtration equipment and cartridges, serving natural gas, electric power, water treatment and petrochemical industries worldwide.": "شركة شينشيانغ داييو لمعدات الترشيح المحدودة — مصنّع معتمد بشهادة ISO9000 لمعدات الترشيح والفلاتر، يخدم قطاعات الغاز الطبيعي والطاقة الكهربائية ومعالجة المياه والبتروكيماويات حول العالم.",
-    "Explore": "استكشف",
-    "About us": "من نحن",
-    "Official website": "الموقع الرسمي",
-    "Contact": "التواصل",
-    "Xinxiang, Henan, China": "شينشيانغ، خنان، الصين",
-    "© 2026 Xinxiang Da Yu Filtration Equipment Co., Ltd. All rights reserved.": "© 2026 شركة شينشيانغ داييو لمعدات الترشيح المحدودة. جميع الحقوق محفوظة.",
-    "Filtration solutions for gas, liquid and oil.": "حلول ترشيح للغاز والسوائل والزيوت.",
-    "Please enter a valid email address.": "يرجى إدخال عنوان بريد إلكتروني صالح.",
-    "Please describe your inquiry.": "يرجى وصف استفسارك.",
-    "Inquiry prepared — opening your email app. Thank you!": "تم تجهيز الاستفسار — سيتم فتح تطبيق البريد. شكرًا لك!",
-    "Inquiry: ": "استفسار: ",
-    "Name: ": "الاسم: ",
-    "Email: ": "البريد الإلكتروني: ",
-    "Phone/WhatsApp: ": "الهاتف/واتساب: ",
-    "Country/Region: ": "الدولة/المنطقة: ",
-    "Message:\n": "الرسالة:\n",
-    "Inquiry from Dayu Filtration website": "استفسار من موقع داييو للترشيح"
-  };
-
-  function t(key){
-    return (document.documentElement.lang === "ar" && AR[key] !== undefined) ? AR[key] : key;
-  }
-
-  function applyLang(lang){
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
-    document.querySelectorAll("[data-i18n]").forEach(function(el){
-      var k = el.getAttribute("data-i18n");
-      if (lang === "ar") { if (AR[k] !== undefined) el.textContent = AR[k]; }
-      else { el.textContent = k; }
-    });
-    document.querySelectorAll("[data-i18n-ph]").forEach(function(el){
-      var k = el.getAttribute("data-i18n-ph");
-      el.setAttribute("placeholder", lang === "ar" && AR[k] !== undefined ? AR[k] : k);
-    });
-    document.title = lang === "ar"
-      ? "شينشيانغ داييو لمعدات الترشيح المحدودة — حلول الترشيح الصناعية"
-      : "Xinxiang Da Yu Filtration Equipment Co., Ltd. — Industrial Filtration Solutions";
-    document.querySelectorAll(".lang-toggle").forEach(function(tg){
-      tg.textContent = lang === "ar" ? "English" : "العربية";
-      tg.setAttribute("aria-label", lang === "ar" ? "Switch to English" : "Switch to Arabic");
-    });
-    try { localStorage.setItem("dayu-lang", lang); } catch(e){}
-  }
-
-  var saved = null;
-  try { saved = localStorage.getItem("dayu-lang"); } catch(e){}
-  var qs = new URLSearchParams(window.location.search);
-  var startLang = (qs.get("lang") === "ar" || qs.get("lang") === "en")
-    ? qs.get("lang")
-    : (saved === "ar" || saved === "en" ? saved : "en");
-  applyLang(startLang);
-
-  document.querySelectorAll(".lang-toggle").forEach(function(tg){
-    tg.addEventListener("click", function(){
-      applyLang(document.documentElement.lang === "ar" ? "en" : "ar");
-    });
-  });
 
   /* Mobile nav */
   var navToggle = document.getElementById("navToggle");
@@ -932,7 +687,7 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
   document.querySelectorAll(".inq").forEach(function(btn){
     btn.addEventListener("click", function(){
       if (inquiryField && btn.getAttribute("data-prod")) {
-        inquiryField.value = t("Inquiry: ") + btn.getAttribute("data-prod") + "\n\n";
+        inquiryField.value = "Inquiry: " + btn.getAttribute("data-prod") + "\n\n";
       }
       if (contactSec) contactSec.scrollIntoView({ behavior: prefersReduced ? "auto" : "smooth" });
     });
@@ -956,22 +711,22 @@ html[dir="rtl"] .nav a::after{left:auto;right:0}
       e.preventDefault();
       var email = form.email, msg = form.message;
       if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        email.focus(); showToast(t("Please enter a valid email address."));
+        email.focus(); showToast("Please enter a valid email address.");
         return;
       }
-      if (!msg.value.trim()) { msg.focus(); showToast(t("Please describe your inquiry.")); return; }
+      if (!msg.value.trim()) { msg.focus(); showToast("Please describe your inquiry."); return; }
       var name = (form.name && form.name.value) ? form.name.value.trim() : "—";
       var tel = (form.tel && form.tel.value) ? form.tel.value.trim() : "—";
       var country = (form.country && form.country.value) ? form.country.value.trim() : "—";
-      var subject = encodeURIComponent(t("Inquiry from Dayu Filtration website"));
+      var subject = encodeURIComponent("Inquiry from Dayu Filtration website");
       var body = encodeURIComponent(
-        t("Name: ") + name + "\n" +
-        t("Email: ") + email.value + "\n" +
-        t("Phone/WhatsApp: ") + tel + "\n" +
-        t("Country/Region: ") + country + "\n\n" +
-        t("Message:\n") + msg.value
+        "Name: " + name + "\n" +
+        "Email: " + email.value + "\n" +
+        "Phone/WhatsApp: " + tel + "\n" +
+        "Country/Region: " + country + "\n\n" +
+        "Message:\n" + msg.value
       );
-      showToast(t("Inquiry prepared — opening your email app. Thank you!"));
+      showToast("Inquiry prepared — opening your email app. Thank you!");
       setTimeout(function(){
         window.location.href = "mailto:xxdayu22@gmail.com?subject=" + subject + "&body=" + body;
       }, 500);
