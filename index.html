@@ -212,6 +212,17 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
 .factory-item:hover{border-color:var(--line);box-shadow:0 14px 30px rgba(12,30,51,.09)}
 .factory-item img{width:100%;height:220px;object-fit:cover;display:block}
 .factory-item figcaption{font-family:var(--font-d);font-weight:700;text-transform:uppercase;letter-spacing:.05em;font-size:1.05rem;color:var(--ink);padding:12px 4px 4px;text-align:center}
+.news-card .news-ex{font-size:.9rem;color:var(--muted);line-height:1.6;margin:0 0 14px}
+.rd-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft);margin-top:44px}
+.rd-cell{background:#fff;padding:26px 24px}
+.rd-cell b{font-family:var(--font-d);font-weight:900;font-size:1.9rem;color:var(--signal);line-height:1;display:block;margin-bottom:6px}
+.rd-cell span{font-size:.92rem;color:var(--muted)}
+.culture-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
+.culture-card{background:#fff;border:1px solid var(--line-soft);padding:30px 26px;transition:box-shadow .25s,border-color .25s}
+.culture-card:hover{border-color:var(--line);box-shadow:0 14px 30px rgba(12,30,51,.09)}
+.culture-card .ico{width:50px;height:50px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:var(--paper)}
+.culture-card h3{font-family:var(--font-d);font-weight:800;text-transform:uppercase;letter-spacing:.05em;font-size:1.25rem;margin-bottom:10px}
+.culture-card p{font-size:.92rem;color:var(--muted);line-height:1.65}
 .news-card .more svg{width:14px;height:14px;transition:transform .2s}
 .news-card:hover .more svg{transform:translateX(4px)}
 
@@ -309,6 +320,8 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   .ship-grid{grid-template-columns:repeat(2,1fr)}
   .ind-grid{grid-template-columns:repeat(2,1fr)}
   .factory-grid{grid-template-columns:repeat(2,1fr)}
+  .rd-grid{grid-template-columns:repeat(2,1fr)}
+  .culture-grid{grid-template-columns:repeat(2,1fr)}
   .split{grid-template-columns:1fr;gap:48px}
   .split-media img{height:380px}
   .about .split{gap:56px}
@@ -334,6 +347,8 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   .ind-grid{grid-template-columns:1fr}
   .factory-grid{grid-template-columns:1fr}
   .factory-item img{height:280px}
+  .rd-grid{grid-template-columns:1fr}
+  .culture-grid{grid-template-columns:1fr}
   .about-points{grid-template-columns:1fr}
   .f-row{grid-template-columns:1fr;gap:0}
   .footer-grid{grid-template-columns:1fr}
@@ -602,6 +617,52 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   </div>
 </section>
 
+<!-- ===== R&D Strength ===== -->
+<section class="section rd" id="rd">
+  <div class="container">
+    <div class="sec-head rv">
+      <div>
+        <span class="overline">R&amp;D strength</span>
+        <h2>Five Years of Focused Filtration R&amp;D</h2>
+        <p class="lead">Dedicated research since 2018 — coalescence separation for natural gas pipelines, cyclone filtration, and filter elements for natural gas power plant front-end modules and pressure regulating stations.</p>
+      </div>
+    </div>
+    <div class="split">
+      <div class="rv">
+        <p class="lead" style="margin-bottom:22px">Since 2018, our engineering team has focused on gas filtration: coalescence separation filtration for natural gas pipeline transportation, cyclone filtration, and a series of filter elements for the front-end modules and pressure regulating stations of natural gas power plants.</p>
+        <p class="lead">Five years of dedicated development have produced 10 R&amp;D programs, now protected by 21 utility model patents and 1 invention patent for natural gas filter elements — praised by customers for their scientific value and delivering measurable economic and social benefits.</p>
+      </div>
+      <div class="rv">
+        <div class="rd-grid">
+          <div class="rd-cell"><b>2018</b><span>R&amp;D team established</span></div>
+          <div class="rd-cell"><b>5+</b><span>Years of dedicated research</span></div>
+          <div class="rd-cell"><b>10</b><span>Development programs delivered</span></div>
+          <div class="rd-cell"><b>21+1</b><span>Utility model &amp; invention patents</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Corporate Culture ===== -->
+<section class="section culture" id="culture">
+  <div class="container">
+    <div class="sec-head rv">
+      <div>
+        <span class="overline">Corporate culture</span>
+        <h2>Values That Guide Our Work</h2>
+        <p class="lead">Upholding the spirit of &ldquo;Dayu Water Control&rdquo; — professionalism, focus and dedication are our endless pursuit.</p>
+      </div>
+    </div>
+    <div class="culture-grid">
+      <div class="culture-card rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Quality</h3><p>We regard quality as the lifeblood of our enterprise and devote ourselves to building first-class filtration products.</p></div>
+      <div class="culture-card rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9L17 7M7 17l-2.1 2.1"/></svg></span><h3>Speciality</h3><p>We build every product from a professional perspective and approach every detail with a focused mindset.</p></div>
+      <div class="culture-card rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 3z"/></svg></span><h3>Innovation</h3><p>Only innovation brings breakthrough. We infuse an innovative spirit into every product detail — on the road of innovation, there is a starting point but no end.</p></div>
+      <div class="culture-card rv"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 11V8a4 4 0 0 1 8 0v3"/><path d="M4 13a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4z"/></svg></span><h3>Integrity</h3><p>Integrity is our code of ethics and an invaluable intangible asset; honest management is the foundation of long-term business.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- ===== Services ===== -->
 <section class="section services" id="services">
   <div class="container">
@@ -693,12 +754,12 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
       </div>
     </div>
     <div class="news-grid">
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 23, 2026</span><h3>Upholding the Spirit of Craftsmanship, Building a Better Future!</h3><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 19, 2026</span><h3>Outlook on New Water Treatment Technologies</h3><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 9, 2026</span><h3>Why does the manual specify 1016 mm while the actual measurement is 1040 mm? Unraveling the "size mystery" of high-flow filter cartridges.</h3><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>July 13, 2026</span><h3>80th Anniversary of the Victory in the War of Resistance Against Japanese Aggression: Remembering History, Building Shared Conviction</h3><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>October 9, 2025</span><h3>Instructions for Use of Gas Engine Filter Cartridges</h3><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
-      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 26, 2025</span><h3>National Day Tribute: Forging the Spirit Through Light and Shadow</h3><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 23, 2026</span><h3>Upholding the Spirit of Craftsmanship, Building a Better Future!</h3><p class="news-ex">A tribute to the craftsmanship spirit behind every Dayu filter element — and our commitment to building a better future together with our customers.</p><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 19, 2026</span><h3>Outlook on New Water Treatment Technologies</h3><p class="news-ex">An outlook on emerging water treatment technologies and what they mean for industrial filtration and plant operations.</p><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 9, 2026</span><h3>Why does the manual specify 1016 mm while the actual measurement is 1040 mm? Unraveling the "size mystery" of high-flow filter cartridges.</h3><p class="news-ex">Why does the manual specify 1016 mm while the actual measurement is 1040 mm? Unraveling the size mystery of high-flow filter cartridges — with a practical selection guide.</p><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>July 13, 2026</span><h3>80th Anniversary of the Victory in the War of Resistance Against Japanese Aggression: Remembering History, Building Shared Conviction</h3><p class="news-ex">Commemorating the 80th anniversary of the victory — remembering history and building shared conviction.</p><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>October 9, 2025</span><h3>Instructions for Use of Gas Engine Filter Cartridges</h3><p class="news-ex">Gas engine filters are critical components in the intake and lubrication systems of gas engines, typically fueled by natural gas, biogas or liquefied petroleum gas.</p><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
+      <article class="news-card rv"><span class="date"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v4M16 3v4"/></svg>September 26, 2025</span><h3>National Day Tribute: Forging the Spirit Through Light and Shadow</h3><p class="news-ex">On September 26, 2025, Xinxiang Da Yu Filtering Equipment Co., Ltd. organized a patriotic film screening event for all employees.</p><a class="more" href="#news">Read more<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></article>
     </div>
   </div>
 </section>
