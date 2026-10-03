@@ -113,10 +113,10 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
 /* ============ Stats band ============ */
 .stats-band{position:relative;z-index:5;margin-top:-72px}
 .stats{background:#fff;border:1px solid var(--line-soft);display:grid;grid-template-columns:repeat(3,1fr);box-shadow:0 14px 40px rgba(12,30,51,.10)}
-.stat{padding:34px 36px;border-right:1px solid var(--line-soft)}
+.stat{padding:30px 32px;border-right:1px solid var(--line-soft)}
 .stat:last-child{border-right:0}
-.stat b{font-family:var(--font-d);font-weight:900;font-size:5.8rem;line-height:1;color:var(--ink);display:flex;align-items:baseline}
-.stat b em{font-style:normal;color:var(--signal);font-size:.45em}
+.stat b{font-family:var(--font-d);font-weight:900;font-size:6.2rem;line-height:1;color:var(--ink);display:flex;align-items:baseline}
+.stat b em{font-style:normal;color:var(--signal);font-size:.6667em}
 .stat span{display:block;margin-top:8px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600}
 
 /* ============ Experience split ============ */
@@ -956,30 +956,9 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     rvEls.forEach(function(el){ el.classList.add("in"); });
   }
 
-  /* Count-up stats */
+  /* Stats: static values (no count-up animation) */
   var counts = document.querySelectorAll(".count");
-  function animateCount(el){
-    var target = parseInt(el.getAttribute("data-count"), 10) || 0;
-    var dur = 1200, start = null;
-    function step(ts){
-      if (!start) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(target * eased);
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  if ("IntersectionObserver" in window && !prefersReduced) {
-    var cio = new IntersectionObserver(function(entries){
-      entries.forEach(function(en){
-        if (en.isIntersecting) { animateCount(en.target); cio.unobserve(en.target); }
-      });
-    }, { threshold: 0.5 });
-    counts.forEach(function(c){ cio.observe(c); });
-  } else {
-    counts.forEach(function(c){ c.textContent = c.getAttribute("data-count"); });
-  }
+  counts.forEach(function(c){ c.textContent = c.getAttribute("data-count"); });
 
   /* Product inquiry -> prefill contact form */
   var inquiryField = document.getElementById("fMsg");
