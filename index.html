@@ -291,10 +291,21 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
 
 
 /* ============ Product tabs ============ */
-.prod-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px}
+.prod-tabs{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}
 .prod-tab{font-family:var(--font-b);font-size:14px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;padding:10px 18px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer;transition:all .2s}
 .prod-tab:hover{border-color:var(--signal);color:var(--ink)}
 .prod-tab.active{background:var(--ink);border-color:var(--ink);color:#fff}
+.prod-tab.cat-water.active{background:#1971C2;border-color:#1971C2}
+.prod-tab.cat-carbon.active{background:#2B8A3E;border-color:#2B8A3E}
+.prod-tab.cat-gas.active{background:#E8590C;border-color:#E8590C}
+.prod-tab.cat-petro.active{background:#7048E8;border-color:#7048E8}
+.prod-tab.cat-air.active{background:#0C8599;border-color:#0C8599}
+.prod-tab.cat-hydraulic.active{background:#E67700;border-color:#E67700}
+.prod-tab.cat-filters.active{background:#495057;border-color:#495057}
+.prod-subtabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px;padding-left:2px}
+.prod-subtab{font-family:var(--font-b);font-size:12.5px;font-weight:600;letter-spacing:.04em;padding:7px 14px;border:1px solid #BBD7F2;background:#E7F1FB;color:#1971C2;cursor:pointer;transition:all .2s;border-radius:2px}
+.prod-subtab:hover{background:#D2E6FA}
+.prod-subtab.active{background:#1971C2;border-color:#1971C2;color:#fff}
 .prod-card.hide{display:none}
 .prod-card .ph a{display:block;width:100%;height:100%}
 .prod-card h3 a:hover{color:var(--signal-dark)}
@@ -501,21 +512,23 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
       </div>
     </div>
     <div class="prod-tabs" role="tablist">
-      <button class="prod-tab active" data-filter="all" role="tab">All products</button>
-      <button class="prod-tab" data-filter="water" role="tab">Water treatment</button>
-      <button class="prod-tab" data-filter="meltblown" role="tab">PPPE Water</button>
-      <button class="prod-tab" data-filter="membrane" role="tab">Membrane</button>
-      <button class="prod-tab" data-filter="wound" role="tab">Wire Wound</button>
-      <button class="prod-tab" data-filter="largeflow" role="tab">Large Flow</button>
-      <button class="prod-tab" data-filter="stator" role="tab">Stator Cooling</button>
-      <button class="prod-tab" data-filter="condensate" role="tab">Condensate</button>
-      <button class="prod-tab" data-filter="marine" role="tab">Marine</button>
-      <button class="prod-tab" data-filter="carbon" role="tab">Activated carbon</button>
-      <button class="prod-tab" data-filter="gas" role="tab">Natural gas</button>
-      <button class="prod-tab" data-filter="petro" role="tab">Petrochemical</button>
-      <button class="prod-tab" data-filter="air" role="tab">Air compressor</button>
-      <button class="prod-tab" data-filter="hydraulic" role="tab">Hydraulic oil</button>
-      <button class="prod-tab" data-filter="filters" role="tab">Filter housing</button>
+      <button class="prod-tab active cat-all" data-filter="all" role="tab">All products</button>
+      <button class="prod-tab cat-water" data-filter="water" role="tab">Water treatment</button>
+      <button class="prod-tab cat-carbon" data-filter="carbon" role="tab">Activated carbon</button>
+      <button class="prod-tab cat-gas" data-filter="gas" role="tab">Natural gas</button>
+      <button class="prod-tab cat-petro" data-filter="petro" role="tab">Petrochemical</button>
+      <button class="prod-tab cat-air" data-filter="air" role="tab">Air compressor</button>
+      <button class="prod-tab cat-hydraulic" data-filter="hydraulic" role="tab">Hydraulic oil</button>
+      <button class="prod-tab cat-filters" data-filter="filters" role="tab">Filter housing</button>
+    </div>
+    <div class="prod-subtabs" id="water-subtabs" style="display:none">
+      <button class="prod-subtab" data-filter="meltblown" role="tab">PPPE Water</button>
+      <button class="prod-subtab" data-filter="membrane" role="tab">Membrane</button>
+      <button class="prod-subtab" data-filter="wound" role="tab">Wire Wound</button>
+      <button class="prod-subtab" data-filter="largeflow" role="tab">Large Flow</button>
+      <button class="prod-subtab" data-filter="stator" role="tab">Stator Cooling</button>
+      <button class="prod-subtab" data-filter="condensate" role="tab">Condensate</button>
+      <button class="prod-subtab" data-filter="marine" role="tab">Marine</button>
     </div>
     <div class="prod-grid">
       <article class="prod-card rv" data-cat="air"><div class="ph"><a href="#products"><img src="assets/cat-air-dust-filter-element.webp" alt="Air dust filter element"></a></div><div class="bd"><span class="tag">Air compressor</span><h3><a href="#products">Air dust filter element</a></h3><div class="model">Air compressor series</div><button class="inq" data-prod="Air dust filter element">Send inquiry<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div></article>
@@ -1034,17 +1047,32 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   });
 
 
-  /* Product category tabs */
+  /* Product category tabs — two-level */
   var tabs = document.querySelectorAll(".prod-tab");
+  var subtabs = document.querySelectorAll(".prod-subtab");
+  var subtabsBar = document.getElementById("water-subtabs");
   var cards = document.querySelectorAll(".prod-card");
+  function applyFilter(f){
+    cards.forEach(function(c){
+      var cats=(c.getAttribute("data-cat")||"").split(" "); c.classList.toggle("hide", f !== "all" && cats.indexOf(f)===-1);
+    });
+  }
   tabs.forEach(function(t){
     t.addEventListener("click", function(){
       tabs.forEach(function(x){ x.classList.remove("active"); });
       t.classList.add("active");
+      subtabs.forEach(function(x){ x.classList.remove("active"); });
       var f = t.getAttribute("data-filter");
-      cards.forEach(function(c){
-        var cats=(c.getAttribute("data-cat")||"").split(" "); c.classList.toggle("hide", f !== "all" && cats.indexOf(f)===-1);
-      });
+      if(f === "water"){ subtabsBar.style.display="flex"; }
+      else { subtabsBar.style.display="none"; }
+      applyFilter(f);
+    });
+  });
+  subtabs.forEach(function(t){
+    t.addEventListener("click", function(){
+      subtabs.forEach(function(x){ x.classList.remove("active"); });
+      t.classList.add("active");
+      applyFilter(t.getAttribute("data-filter"));
     });
   });
 
