@@ -43,7 +43,7 @@ h1{font-size:26px;margin-bottom:8px}
       <span class="cat-badge" id="pCat"></span>
       <p class="desc" id="pDesc"></p>
       <table class="specs" id="pSpecs"></table>
-      <a class="inq-btn" href="mailto:inquiry@dayufilters.com?subject=Inquiry: <span id='pName2'></span>">Send Inquiry</a>
+      <a class="inq-btn" id="inqBtn" href="#">Send Inquiry</a>
     </div>
   </div>
 </div>
@@ -68,13 +68,15 @@ var PRODUCTS={
   specs:[["Outer diameter","159mm"],["Length","1040mm"],["Filter material","PP / glass fiber"],["Flow rate","Up to 60 m³/h per element"]]
 }
 };
-var p=PRODUCTS[location.search.slice(3)]||PRODUCTS["long-fiber-pp-meltblown"];
+var params=new URLSearchParams(location.search);
+var p=PRODUCTS[params.get("p")]||PRODUCTS["long-fiber-pp-meltblown"];
 document.getElementById("pImg").src=p.img;
+document.getElementById("pImg").alt=p.name;
 document.getElementById("pName").textContent=p.name;
-document.getElementById("pName2").textContent=p.name;
 document.getElementById("bcName").textContent=p.name;
 document.getElementById("pCat").textContent=p.cat;
 document.getElementById("pDesc").textContent=p.desc;
+document.getElementById("inqBtn").href="mailto:inquiry@dayufilters.com?subject=Inquiry: "+encodeURIComponent(p.name);
 var t=document.getElementById("pSpecs");
 p.specs.forEach(function(r){var tr=document.createElement("tr");tr.innerHTML="<td>"+r[0]+"</td><td>"+r[1]+"</td>";t.appendChild(tr)});
 </script>
