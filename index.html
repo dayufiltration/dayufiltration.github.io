@@ -1069,6 +1069,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   var subtabs = document.querySelectorAll(".prod-subtab");
   var subtabsBarW = document.getElementById("water-subtabs");
   var subtabsBarG = document.getElementById("gas-subtabs");
+  var subtabsBarP = document.getElementById("petro-subtabs");
   var cards = document.querySelectorAll(".prod-card");
   function applyFilter(f){
     cards.forEach(function(c){
@@ -1081,9 +1082,10 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
       t.classList.add("active");
       subtabs.forEach(function(x){ x.classList.remove("active"); });
       var f = t.getAttribute("data-filter");
-      if(f === "water"){ subtabsBarW.style.display="flex"; subtabsBarG.style.display="none"; }
-      else if(f === "gas"){ subtabsBarW.style.display="none"; subtabsBarG.style.display="flex"; }
-      else { subtabsBarW.style.display="none"; subtabsBarG.style.display="none"; }
+      if(f === "water"){ subtabsBarW.style.display="flex"; subtabsBarG.style.display="none"; subtabsBarP.style.display="none"; }
+      else if(f === "gas"){ subtabsBarW.style.display="none"; subtabsBarG.style.display="flex"; subtabsBarP.style.display="none"; }
+      else if(f === "petro"){ subtabsBarW.style.display="none"; subtabsBarG.style.display="none"; subtabsBarP.style.display="flex"; }
+      else { subtabsBarW.style.display="none"; subtabsBarG.style.display="none"; subtabsBarP.style.display="none"; }
       applyFilter(f);
     });
   });
