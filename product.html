@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Product Detail | Dayu Filtration</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='%231971C2'/></svg>">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#1a1a2e;background:#f8f9fa;line-height:1.6}
+.nav{background:#fff;border-bottom:1px solid #e9ecef;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:10}
+.nav a{text-decoration:none;color:#1a1a2e;font-weight:600}
+.nav .brand{color:#1971C2;font-size:18px}
+.wrap{max-width:900px;margin:32px auto;padding:0 20px}
+.breadcrumb{font-size:14px;color:#868e96;margin-bottom:20px}
+.breadcrumb a{color:#1971C2;text-decoration:none}
+.card{background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.card img{width:100%;max-height:500px;object-fit:cover;display:block}
+.card-body{padding:32px}
+h1{font-size:26px;margin-bottom:8px}
+.cat-badge{display:inline-block;background:#e7f5ff;color:#1971C2;padding:4px 12px;border-radius:20px;font-size:13px;font-weight:600;margin-bottom:16px}
+.desc{color:#495055;margin-bottom:24px}
+.specs{width:100%;border-collapse:collapse;margin-bottom:24px}
+.specs td{padding:10px 14px;border:1px solid #e9ecef;font-size:15px}
+.specs td:first-child{background:#f8f9fa;font-weight:600;width:40%}
+.inq-btn{display:inline-block;background:#1971C2;color:#fff;padding:12px 32px;border-radius:8px;text-decoration:none;font-weight:600}
+.inq-btn:hover{background:#1864AB}
+.back{display:inline-block;margin-bottom:16px;color:#1971C2;text-decoration:none}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html" class="brand">Dayu Filtration</a>
+  <a href="index.html#products">← All Products</a>
+</nav>
+<div class="wrap">
+  <a href="index.html" class="back">← Back to home</a>
+  <div class="breadcrumb"><a href="index.html">Home</a> / <a href="index.html#products">Products</a> / <span id="bcName"></span></div>
+  <div class="card">
+    <img id="pImg" src="" alt="">
+    <div class="card-body">
+      <h1 id="pName"></h1>
+      <span class="cat-badge" id="pCat"></span>
+      <p class="desc" id="pDesc"></p>
+      <table class="specs" id="pSpecs"></table>
+      <a class="inq-btn" href="mailto:inquiry@dayufilters.com?subject=Inquiry: <span id='pName2'></span>">Send Inquiry</a>
+    </div>
+  </div>
+</div>
+<script>
+var PRODUCTS={
+"long-fiber-pp-meltblown":{
+  img:"assets/water-long-fiber-pp.webp",cat:"PPPE Water / Meltblown",
+  name:"Long-fiber PP Meltblown Filter Element",
+  desc:"Polypropylene PP melt-blown filter cartridges manufactured by hot melting polypropylene superfine fiber without chemical adhesives. Fibers bond randomly to form a three-dimensional microporous structure with deep coarse filtration and no fiber shedding.",
+  specs:[["Outer diameter","63mm, 115mm"],["Inner diameter","28mm, 30mm"],["Length","10\", 20\", 30\", 40\""],["Filter material","Polypropylene (PP)"],["End cover","Polypropylene"],["Center bar","Polypropylene"],["Micron rating","1 – 100 μm"]]
+},
+"pape-sintered":{
+  img:"assets/water-pape-sintered.jpg",cat:"PPPE Water / Sintered",
+  name:"PAPE Sintered Filter Element",
+  desc:"Polyethylene sintered filter element with uniform pore structure, high dirt-holding capacity and excellent chemical resistance.",
+  specs:[["Outer diameter","60mm, 80mm"],["Length","10\", 20\", 30\""],["Filter material","Polyethylene (PE)"],["Micron rating","5 – 50 μm"]]
+},
+"high-flow-159":{
+  img:"assets/water-highflow-159.jpg",cat:"Large Flow",
+  name:"High-flow Filter Element 159×1040mm",
+  desc:"Large flow pleated filter cartridge designed for high flow rate applications in power plant and industrial water treatment.",
+  specs:[["Outer diameter","159mm"],["Length","1040mm"],["Filter material","PP / glass fiber"],["Flow rate","Up to 60 m³/h per element"]]
+}
+};
+var p=PRODUCTS[location.search.slice(3)]||PRODUCTS["long-fiber-pp-meltblown"];
+document.getElementById("pImg").src=p.img;
+document.getElementById("pName").textContent=p.name;
+document.getElementById("pName2").textContent=p.name;
+document.getElementById("bcName").textContent=p.name;
+document.getElementById("pCat").textContent=p.cat;
+document.getElementById("pDesc").textContent=p.desc;
+var t=document.getElementById("pSpecs");
+p.specs.forEach(function(r){var tr=document.createElement("tr");tr.innerHTML="<td>"+r[0]+"</td><td>"+r[1]+"</td>";t.appendChild(tr)});
+</script>
+</body>
+</html>
