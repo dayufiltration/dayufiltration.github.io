@@ -1164,18 +1164,17 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   var mTitle=document.getElementById('modalTitle');
   var mModel=document.getElementById('modalModel');
   var mInq=document.getElementById('modalInq');
-  var productMap={
-    "Long-fiber PP Meltblown filter element":"long-fiber-pp-meltblown",
-    "PAPE Sintered filter element":"pape-sintered",
-    "High-flow filter element 159×1040mm":"high-flow-159"
-  };
   document.querySelectorAll('.prod-card').forEach(function(card){
-    card.style.cursor='pointer';
     card.addEventListener('click',function(e){
       if(e.target.closest('button'))return;
+      var img=card.querySelector('img');
       var h3=card.querySelector('h3 a');
-      var key=h3?productMap[h3.textContent.trim()]:null;
-      if(key){location.href='product.html?p='+key;}
+      var model=card.querySelector('.model');
+      mImg.src=img.src; mImg.alt=img.alt;
+      mTitle.textContent=h3?h3.textContent:'';
+      mModel.textContent=model?model.textContent:'';
+      mInq.setAttribute('data-prod',h3?h3.textContent:'');
+      modal.style.display='flex';
     });
   });
   modal.addEventListener('click',function(e){ if(e.target===modal)modal.style.display='none'; });
