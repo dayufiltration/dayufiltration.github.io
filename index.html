@@ -1122,9 +1122,12 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
       <img id="modalImg" src="" style="width:100%;border-radius:12px 12px 0 0;display:block">
       <div style="padding:24px">
         <h2 id="modalTitle" style="margin:0 0 8px;font-size:22px"></h2>
-        <div id="modalModel" style="color:#1971C2;font-weight:600;margin-bottom:16px"></div>
         <p style="color:#555;line-height:1.6;margin-bottom:20px">This product is widely used in water treatment, natural gas, petrochemical and industrial filtration. Contact us for specifications, custom sizes and OEM/ODM service.</p>
-        <button class="inq" id="modalInq" style="background:#1971C2;color:#fff;border:none;padding:12px 28px;border-radius:8px;cursor:pointer;font-size:15px">Send Inquiry</button>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a id="modalWa" href="#" target="_blank" rel="noopener" style="flex:1;min-width:180px;background:#25D366;color:#fff;text-align:center;text-decoration:none;padding:13px 20px;border-radius:8px;font-weight:600">WhatsApp</a>
+          <a id="modalMail" href="#" style="flex:1;min-width:180px;background:#1971C2;color:#fff;text-align:center;text-decoration:none;padding:13px 20px;border-radius:8px;font-weight:600">Email</a>
+        </div>
+        <p style="font-size:12.5px;color:#999;margin-top:14px;text-align:center">Choose a channel &mdash; the product model is included in your message automatically.</p>
       </div>
     </div>
   </div>
@@ -1133,28 +1136,24 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
   var modal=document.getElementById('prodModal');
   var mImg=document.getElementById('modalImg');
   var mTitle=document.getElementById('modalTitle');
-  var mModel=document.getElementById('modalModel');
-  var mInq=document.getElementById('modalInq');
+  var mWa=document.getElementById('modalWa');
+  var mMail=document.getElementById('modalMail');
+  function openInquiry(card){
+    var img=card.querySelector('img');
+    var h3=card.querySelector('h3 a');
+    var name=h3?h3.textContent:'';
+    mImg.src=img.src; mImg.alt=img.alt;
+    mTitle.textContent=name;
+    mWa.href='https://wa.me/6580693756?text='+encodeURIComponent("Hello! I'm interested in: "+name+". Please send me the specifications and quotation.");
+    mMail.href='mailto:inquiry@dayufilters.com?subject='+encodeURIComponent('Inquiry about '+name)+'&body='+encodeURIComponent("Hello,\n\nI am interested in the following product:\nProduct: "+name+"\nQuantity:\nCompany:\nCountry:\n\nLooking forward to your quotation.\n\nBest regards");
+    modal.style.display='flex';
+  }
   document.querySelectorAll('.prod-card').forEach(function(card){
-    card.addEventListener('click',function(e){
-      if(e.target.closest('button'))return;
-      var img=card.querySelector('img');
-      var h3=card.querySelector('h3 a');
-      var model=card.querySelector('.model');
-      mImg.src=img.src; mImg.alt=img.alt;
-      mTitle.textContent=h3?h3.textContent:'';
-      mModel.textContent=model?model.textContent:'';
-      mInq.setAttribute('data-prod',h3?h3.textContent:'');
-      modal.style.display='flex';
-    });
+    card.addEventListener('click',function(e){ if(e.target.closest('button'))return; openInquiry(card); });
+    var btn=card.querySelector('.inq');
+    if(btn)btn.addEventListener('click',function(){ openInquiry(card); });
   });
   modal.addEventListener('click',function(e){ if(e.target===modal)modal.style.display='none'; });
-  mInq.addEventListener('click',function(){
-    var p=this.getAttribute('data-prod')||'';
-    var toast=document.getElementById('toast');
-    toast.textContent='Opening inquiry for: '+p;
-    toast.classList.add('show'); setTimeout(function(){toast.classList.remove('show');},3000);
-  });
 })();
 </script>
 </body>
