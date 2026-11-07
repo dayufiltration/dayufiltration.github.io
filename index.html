@@ -1195,10 +1195,19 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         "Country/Region: " + country + "\n\n" +
         "Message:\n" + msg.value
       );
-      showToast("Inquiry prepared — opening your email app. Thank you!");
+      var plain =
+        "To: inquiry@dayufilters.com\n" +
+        "Subject: Inquiry from Dayu Filtration website\n\n" +
+        "Name: " + name + "\n" +
+        "Email: " + email.value + "\n" +
+        "Phone/WhatsApp: " + tel + "\n" +
+        "Country/Region: " + country + "\n\n" +
+        "Message:\n" + msg.value;
+      if (window.dyCopy) window.dyCopy(plain);
+      showToast("Inquiry copied to the clipboard. Paste it into an email to inquiry@dayufilters.com — or send the same text on WhatsApp.");
       setTimeout(function(){
         window.location.href = "mailto:inquiry@dayufilters.com?subject=" + subject + "&body=" + body;
-      }, 500);
+      }, 900);
     });
   }
 })();
@@ -1221,7 +1230,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
           <a id="modalWa" href="#" target="_blank" rel="noopener" style="flex:1;min-width:180px;background:#25D366;color:#fff;text-align:center;text-decoration:none;padding:13px 20px;border-radius:8px;font-weight:600">WhatsApp</a>
           <a id="modalMail" href="#" style="flex:1;min-width:180px;background:#1971C2;color:#fff;text-align:center;text-decoration:none;padding:13px 20px;border-radius:8px;font-weight:600">Email</a>
         </div>
-        <p style="font-size:12.5px;color:#999;margin-top:14px;text-align:center">Choose a channel &mdash; the product model is included in your message automatically.</p>
+        <p style="font-size:12.5px;color:#999;margin-top:14px;text-align:center">WhatsApp opens with the product name already filled in. The email option copies <b>inquiry@dayufilters.com</b> to your clipboard so it works even without a mail app.</p>
       </div>
     </div>
   </div>
@@ -1248,6 +1257,45 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     if(btn)btn.addEventListener('click',function(){ openInquiry(card); });
   });
   modal.addEventListener('click',function(e){ if(e.target===modal)modal.style.display='none'; });
+})();
+</script>
+<script>
+/* DAYU mail fallback: copy the address so the inquiry still reaches us when no mail app is configured */
+(function(){
+  function copyText(t){
+    try{ if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(t); return true; } }catch(e){}
+    try{
+      var x=document.createElement('textarea'); x.value=t;
+      x.style.cssText='position:fixed;top:0;left:0;opacity:0';
+      document.body.appendChild(x); x.focus(); x.select();
+      var ok=document.execCommand('copy');
+      document.body.removeChild(x); return ok;
+    }catch(e){ return false; }
+  }
+  window.dyCopy = copyText;
+  function toast(m){
+    var d=document.createElement('div');
+    d.textContent=m;
+    d.style.cssText='position:fixed;left:50%;bottom:34px;transform:translateX(-50%);z-index:99999;'+
+      'background:#0C1E33;color:#fff;padding:12px 22px;border-radius:6px;'+
+      'font:14px/1.55 system-ui,-apple-system,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.28);'+
+      'max-width:90vw;text-align:center';
+    document.body.appendChild(d);
+    setTimeout(function(){ d.style.transition='opacity .35s'; d.style.opacity='0'; }, 2800);
+    setTimeout(function(){ if(d.parentNode) d.parentNode.removeChild(d); }, 3300);
+  }
+  window.dyToast = toast;
+  document.addEventListener('click', function(e){
+    var t = e.target;
+    var a = (t && t.closest) ? t.closest('a') : null;
+    if(!a) return;
+    var h = a.getAttribute('href') || '';
+    if(h.toLowerCase().indexOf('mailto:') !== 0) return;
+    var addr = h.slice(7).split('?')[0];
+    var ok = copyText(addr);
+    toast(ok ? (addr + ' copied \u2014 paste it into your mailbox if no mail app opens.')
+             : ('Email us at ' + addr));
+  }, true);
 })();
 </script>
 </body>
