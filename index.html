@@ -20,13 +20,13 @@ gtag('config', 'G-SJ00NMZKVQ');
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Xinxiang Da Yu Filtering Equipment Co., Ltd.">
 <meta property="og:title" content="Xinxiang Da Yu Filtering Equipment Co., Ltd. — Industrial Filtration Solutions">
-<meta property="og:description" content="Filtration technology solutions for gas, liquid and oil — filter elements and cartridges for natural gas, electric power, water treatment and petrochemical industries. ISO9000 certified manufacturer.">
+<meta property="og:description" content="Filtration technology solutions for gas, liquid and oil — filter elements and cartridges for natural gas, electric power, water treatment and petrochemical industries. ISO 9001 certified manufacturer.">
 <meta property="og:url" content="https://www.dayufilters.com/">
 <meta property="og:image" content="https://www.dayufilters.com/assets/hero-banner1.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Xinxiang Da Yu Filtering Equipment Co., Ltd. — Industrial Filtration Solutions">
-<meta name="twitter:description" content="Filter elements and cartridges for gas, liquid and oil — natural gas, electric power, water treatment and petrochemical. ISO9000 certified manufacturer.">
+<meta name="twitter:description" content="Filter elements and cartridges for gas, liquid and oil — natural gas, electric power, water treatment and petrochemical. ISO 9001 certified manufacturer.">
 <meta name="twitter:image" content="https://www.dayufilters.com/assets/hero-banner1.jpg">
 <link rel="preconnect" href="https://miaoda.feishu.cn">
 <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Archivo:wght@400;500;600;700&display=swap">
@@ -202,15 +202,16 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
 /* ============ Industries ============ */
 .industries{background:var(--paper);background-image:var(--grid-dark)}
 .ind-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:44px}
-.ind-card{background:#fff;border:1px solid var(--line-soft);padding:30px 26px;display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s}
+.ind-card{background:#fff;border:1px solid var(--line-soft);padding:30px 26px;display:flex;flex-direction:column;transition:box-shadow .25s,border-color .25s;min-width:0}
 .ind-card:hover{border-color:var(--line);box-shadow:0 14px 30px rgba(12,30,51,.09)}
 .ind-card .ico{width:50px;height:50px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;margin-bottom:20px;background:var(--paper)}
 .ind-card .ico svg{width:24px;height:24px;stroke:var(--signal)}
 .ind-card h3{font-size:1.08rem;font-weight:700;margin-bottom:14px;text-transform:none;line-height:1.25}
 .ind-card ul{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
-.ind-card li{font-size:.9rem;color:var(--muted);padding-left:18px;position:relative;line-height:1.5}
+.ind-card li{font-size:.9rem;color:var(--muted);padding-left:18px;position:relative;line-height:1.5;overflow-wrap:anywhere}
 .ind-card li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;background:var(--signal);opacity:.75}
 .ind-card .more{margin-top:auto}
+.ind-card .text-link{display:inline-block;word-break:normal}
 
 /* ============ News ============ */
 .news{background:var(--white)}
@@ -312,6 +313,10 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
 .prod-subtab:hover{background:#D2E6FA}
 .prod-subtab.active{background:#1971C2;border-color:#1971C2;color:#fff}
 .prod-card.hide{display:none}
+.prod-card{min-width:0}
+.prod-card h3{overflow-wrap:anywhere}
+.prod-card .spec span{min-width:0;overflow-wrap:anywhere}
+.prod-grid>*{min-width:0}
 .prod-card .ph a{display:block;width:100%;height:100%}
 .prod-card h3 a:hover{color:var(--signal-dark)}
 .oem-band{margin-top:44px;background:var(--ink);color:#fff;padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;position:relative;overflow:hidden}
@@ -398,7 +403,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
       "url": "https://www.dayufilters.com/",
       "logo": "https://www.dayufilters.com/assets/dy-logo.webp",
       "image": "https://www.dayufilters.com/assets/hero-banner1.jpg",
-      "description": "ISO9000 certified manufacturer of filtration equipment, filter elements and cartridges for gas, liquid and oil — serving natural gas, electric power, industrial water treatment and petrochemical industries.",
+      "description": "ISO 9001 certified manufacturer of filtration equipment, filter elements and cartridges for gas, liquid and oil — serving natural gas, electric power, industrial water treatment and petrochemical industries.",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Xinxiang City",
@@ -480,9 +485,9 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
 <!-- ===== Stats ===== -->
 <div class="container stats-band">
   <div class="stats rv">
-    <div class="stat"><b><span class="count" data-count="8600">0</span><em>m²+</em></b><span>Factory area</span></div>
-    <div class="stat"><b><span class="count" data-count="16">0</span><em>+</em></b><span>Years of production experience</span></div>
-    <div class="stat"><b><span class="count" data-count="20">0</span><em>+</em></b><span>Patent certificates</span></div>
+    <div class="stat"><b><span class="count" data-count="8600">8600</span><em>m²+</em></b><span>Factory area</span></div>
+    <div class="stat"><b><span class="count" data-count="16">16</span><em>+</em></b><span>Years of production experience</span></div>
+    <div class="stat"><b><span class="count" data-count="20">20</span><em>+</em></b><span>Patent certificates</span></div>
   </div>
 </div>
 
@@ -495,9 +500,9 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         <div class="chip"><b>16+</b>Years in natural gas cartridges</div>
       </div>
       <div class="rv">
-        <h2>From Nanometers to Millimeters</h2>
+        <h2>Filtration from 0.1 µm to 350 µm</h2>
         <p class="lead" style="margin-bottom:18px;font-weight:700">Precision Filtration. Proven Expertise. 16 Years of Excellence.</p>
-        <p class="lead" style="margin-bottom:16px">For 16 years, we have specialized in the manufacturing of natural gas filter cartridges, developing filtration expertise across every scale — from nanometer-level coalescence to millimeter-stage protection.</p>
+        <p class="lead" style="margin-bottom:16px">For 16 years we have manufactured natural gas filter cartridges and industrial filter elements, covering fine coalescing filtration from 0.1 µm through coarse pre-filtration to 350 µm.</p>
         <p class="lead" style="margin-bottom:16px">As an integrated filtration technology company, we combine R&amp;D, precision manufacturing, and technical expertise to provide a comprehensive range of filtration equipment and filter cartridges.</p>
         <p class="lead" style="margin-bottom:16px">With advanced production technologies, comprehensive machining capabilities, and rigorous testing facilities, we deliver reliable, high-performance filtration solutions engineered for demanding industrial applications.</p>
         <p class="lead">From the smallest particles to the toughest protection requirements — we filter with precision.</p>
@@ -669,7 +674,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         <p>Xinxiang Da Yu Filtering Equipment Co., Ltd. is a specialized manufacturer of filtration solutions. The company develops, manufactures and sells filtration equipment and filter elements for water treatment, natural gas, electric power and petrochemical applications. Our engineering team also provides consultation and technical support throughout the project.</p>
         <p>Our fully enclosed clean factory building, advanced production equipment and complete production processes — together with an innovative technical and R&D team — ensure the quality of every product that leaves our plant.</p>
         <div class="about-points">
-          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h4>Authoritative qualifications</h4><p>Certified ISO9000 for 9 consecutive years, High-tech Enterprise &amp; IP management system certified.</p></div></div>
+          <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><div><h4>Authoritative qualifications</h4><p>Certified to ISO 9001 for 9 consecutive years, High-tech Enterprise &amp; IP management system certified.</p></div></div>
           <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21h16M6 21V7l6-4 6 4v14"/><path d="M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg></span><div><h4>Standardized clean production</h4><p>Closed clean workshop, advanced equipment and a professional R&D team guarantee stable product quality.</p></div></div>
           <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2.6"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M19.1 4.9l-2.8 2.8M7.7 16.3l-2.8 2.8"/></svg></span><div><h4>Full range filter products</h4><p>Full series filter cartridges for water treatment, power plants, natural gas and sanitation vehicles.</p></div></div>
           <div class="about-point"><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3v3M14 3v3M5 9h14M6 9v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V9"/><path d="M10 13h4M10 17h4"/></svg></span><div><h4>Gas filtration R&amp;D</h4><p>22 patents for gas coalescence and cyclone filters; mature custom solutions trusted by customers worldwide.</p></div></div>
@@ -720,7 +725,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         <h2>Qualifications &amp; Certifications</h2>
         <p class="lead" style="color:#B9C9D9">We compete on product quality, fair pricing and dependable after-sales service — and we welcome customers to visit our factory or explore a partnership.</p>
         <div class="q-list">
-          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4>ISO9000 certified — 9 consecutive years</h4><p>Sustained quality-management certification across a decade of manufacturing.</p></div></div>
+          <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4>ISO 9001 certified — 9 consecutive years</h4><p>Sustained quality-management certification across a decade of manufacturing.</p></div></div>
           <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4>Intellectual property management system certified</h4><p>Certificate obtained in December 2020, protecting our proprietary manufacturing know-how.</p></div></div>
           <div class="q-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12l5 5L20 7"/></svg><div><h4>High-tech enterprise — Henan Province</h4><p>Title obtained in 2021 in recognition of sustained R&amp;D investment and innovation.</p></div></div>
         </div>
@@ -842,26 +847,30 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c1.5 3-3.5 5-3.5 8.5a3.5 3.5 0 0 0 7 0C15.5 8 12 7.5 12 3z"/><path d="M12 15.5V21"/></svg></span>
         <h3>Natural gas industry</h3>
-        <ul><li>Protect equipment</li><li>Stable gas supply conditions</li><li>Improve safety</li><li>Purify gas source quality</li><li>Reduce operating losses</li></ul>
-        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p style="font-size:.84rem;color:#7b8898;line-height:1.55;margin-bottom:12px">Pipeline transmission, pressure-reducing stations, compressor stations and gas-fired power plants.</p>
+        <ul><li>Rust, weld slag, sand and pipeline dust down to 1 µm</li><li>Compressor oil mist and liquid hydrocarbon carryover</li><li>Free water, aerosols and hydrate-forming moisture</li><li>Protects flow meters, regulators, control valves and turbine fuel systems</li></ul>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:auto"><a class="text-link" href="/category/natural-gas-filters.html">Browse natural gas filters<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="text-link" href="#contact">Get a quote</a></div>
       </div>
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L5 14h6l-1 8 8-12h-6l1-8z"/></svg></span>
         <h3>Electric power industry</h3>
-        <ul><li>Protect core unit equipment</li><li>Ensure stable and safe unit operation</li><li>Improve generation efficiency, reduce accumulated energy loss</li><li>Reduce O&amp;M costs and downtime losses</li><li>Environmental compliance</li><li>Adapt to new electric tracks</li></ul>
-        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p style="font-size:.84rem;color:#7b8898;line-height:1.55;margin-bottom:12px">Steam and combined-cycle plants, generator cooling and turbine auxiliary systems.</p>
+        <ul><li>Condensate iron oxide, corrosion products and suspended solids</li><li>Stator cooling water particles that block hollow conductors</li><li>Hydraulic and lube oil contamination in turbine control systems</li><li>Protects condensers, stator cooling circuits, feed pumps and hydraulic units</li></ul>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:auto"><a class="text-link" href="/category/water-treatment-filters.html">Browse power plant filter elements<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="text-link" href="#contact">Get a quote</a></div>
       </div>
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></span>
         <h3>Industrial water treatment</h3>
-        <ul><li>Intercept solid impurities, protect back-end equipment</li><li>Stabilize water quality to production standards</li><li>Improve water treatment process efficiency</li><li>Inhibit corrosion, scaling and microbial growth</li><li>Promote wastewater reuse and environmental discharge</li><li>Reduce O&amp;M and downtime losses</li></ul>
-        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p style="font-size:.84rem;color:#7b8898;line-height:1.55;margin-bottom:12px">RO feed water, process water, cooling water and wastewater reuse.</p>
+        <ul><li>Suspended solids, rust and colloids that foul membranes</li><li>Turbidity and filterable matter down to 1 µm</li><li>Oil and grease carryover ahead of biological treatment</li><li>Protects RO and UF membranes, pumps, heat exchangers and spray nozzles</li></ul>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:auto"><a class="text-link" href="/category/water-treatment-filters.html">Browse water treatment filters<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="text-link" href="#contact">Get a quote</a></div>
       </div>
       <div class="ind-card rv">
         <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3h8v2h-1v2h5v2h-1v10h1v2H4v-2h1V9H4V7h5V5H8V3z"/><path d="M10 13h4M10 17h4"/></svg></span>
         <h3>Petrochemical industry</h3>
-        <ul><li>Protect refining, chemical and mining equipment</li><li>Stabilize process, improve product quality</li><li>Reduce flammable and explosive safety risks</li><li>Cut auxiliary material energy consumption and O&amp;M expense</li><li>Help emissions meet environmental standards</li><li>Adapt to the entire petrochemical chain</li></ul>
-        <a class="text-link more" href="#contact">Free quote now<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p style="font-size:.84rem;color:#7b8898;line-height:1.55;margin-bottom:12px">Amine units, TEG dehydration, hydrotreating and process gas trains.</p>
+        <ul><li>Iron sulfide, catalyst fines and coke particles</li><li>Amine and TEG carryover, hydrocarbon slip</li><li>Particulate that erodes pumps, seals and control valves</li><li>Protects amine absorbers, TEG contactors, reactors and pump seals</li></ul>
+        <div style="display:flex;gap:14px;flex-wrap:wrap;margin-top:auto"><a class="text-link" href="/category/petrochemical-filters.html">Browse petrochemical filters<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a><a class="text-link" href="#contact">Get a quote</a></div>
       </div>
     </div>
   </div>
@@ -908,7 +917,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     </div>
     <div class="faq-list rv">
       <details class="faq-item"><summary>What is the company's main business?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="faq-a">We provide filtration technology solutions for water treatment, and develop, produce and sell a wide range of filters and filter elements.</div></details>
-      <details class="faq-item"><summary>What qualifications and honors has the company obtained?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="faq-a">We have passed ISO9000 certification for 9 consecutive years, own intellectual property management certification and have been rated as a High-tech Enterprise in Henan Province.</div></details>
+      <details class="faq-item"><summary>What qualifications and honors has the company obtained?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="faq-a">We have held ISO 9001 certification for 9 consecutive years, own intellectual property management certification and have been rated as a High-tech Enterprise in Henan Province.</div></details>
       <details class="faq-item"><summary>What main products does the company manufacture?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="faq-a">We produce various filter elements and filters such as PP, stainless steel, activated carbon filters and special filters for sanitation vehicles.</div></details>
       <details class="faq-item"><summary>What R&amp;D achievements has the company made in natural gas filtration?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="faq-a">We own 21 utility model patents and 1 invention patent for natural gas filter elements after five years of research.</div></details>
       <details class="faq-item"><summary>What is the company's development philosophy?<span class="pm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="faq-a">We adhere to professionalism and dedication, and welcome customers to visit and cooperate.</div></details>
@@ -973,17 +982,17 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     <p style="max-width:760px;color:#5b6a7b;line-height:1.65;margin-bottom:26px">Every application range has its own page listing the full series, the specifications we hold on file and the matching notes for OEM replacement. Start from the range closest to your process.</p>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px">
       <a href="/category/water-treatment-filters.html" style="display:block;border:1px solid #e5e9ee;background:#fff;padding:18px 20px;text-decoration:none;color:#0C1E33;transition:border-color .15s">
-        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">38 series</span>
+        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">29 series</span>
         <strong style="display:block;font-size:.98rem;margin-bottom:5px">Water Treatment Filters</strong>
         <span style="display:block;font-size:.82rem;line-height:1.55;color:#6b7787">For industrial water treatment, power plant water systems and process water lines.</span>
       </a>
       <a href="/category/petrochemical-filters.html" style="display:block;border:1px solid #e5e9ee;background:#fff;padding:18px 20px;text-decoration:none;color:#0C1E33;transition:border-color .15s">
-        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">20 series</span>
+        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">16 series</span>
         <strong style="display:block;font-size:.98rem;margin-bottom:5px">Petrochemical Filters</strong>
         <span style="display:block;font-size:.82rem;line-height:1.55;color:#6b7787">For refineries, gas plants and coal-chemical process streams.</span>
       </a>
       <a href="/category/natural-gas-filters.html" style="display:block;border:1px solid #e5e9ee;background:#fff;padding:18px 20px;text-decoration:none;color:#0C1E33;transition:border-color .15s">
-        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">12 series</span>
+        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">11 series</span>
         <strong style="display:block;font-size:.98rem;margin-bottom:5px">Natural Gas Filters</strong>
         <span style="display:block;font-size:.82rem;line-height:1.55;color:#6b7787">For natural gas transmission pipelines, city gate stations and pressure regulating stations.</span>
       </a>
@@ -998,7 +1007,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         <span style="display:block;font-size:.82rem;line-height:1.55;color:#6b7787">For taste, odour and organic removal in water and process liquid streams.</span>
       </a>
       <a href="/category/hydraulic-oil-filters.html" style="display:block;border:1px solid #e5e9ee;background:#fff;padding:18px 20px;text-decoration:none;color:#0C1E33;transition:border-color .15s">
-        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">5 series</span>
+        <span style="display:block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#ff6a00;font-weight:700;margin-bottom:6px">3 series</span>
         <strong style="display:block;font-size:.98rem;margin-bottom:5px">Hydraulic Oil Filters</strong>
         <span style="display:block;font-size:.82rem;line-height:1.55;color:#6b7787">For hydraulic power units, lubrication circuits and suction, pressure, return and bypass lines.</span>
       </a>
@@ -1021,7 +1030,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
           <img src="assets/dy-logo.webp" alt="DAYU FILTER logo">
           <span class="brand-name">DAYU <span style="color:var(--signal)">FILTER</span></span>
         </a>
-        <p class="blurb">Xinxiang Da Yu Filtering Equipment Co., Ltd. — an ISO9000-certified manufacturer of filtration equipment and cartridges, serving natural gas, electric power, water treatment and petrochemical industries worldwide.</p>
+        <p class="blurb">Xinxiang Da Yu Filtering Equipment Co., Ltd. — an ISO 9001 certified manufacturer of filtration equipment and cartridges, serving natural gas, electric power, water treatment and petrochemical industries worldwide.</p>
       </div>
       <div>
         <h4>Explore</h4>
@@ -1059,6 +1068,8 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         </ul>
       </div>
     </div>
+
+    <p style="font-size:.76rem;line-height:1.7;color:#7b8898;max-width:92ch;margin:28px 0 0">All manufacturer names, part numbers and trademarks shown on this website are the property of their respective owners and are used for cross-reference purposes only. DAYU FILTER is not affiliated with, endorsed by, or an authorized distributor of these manufacturers unless expressly stated.</p>
     <div class="footer-bottom">
       <span>© 2026 新乡市大禹过滤设备有限公司 Xinxiang Da Yu Filtering Equipment Co., Ltd. All rights reserved.</span>
       <span>Filtration solutions for gas, liquid and oil.</span>
@@ -1203,7 +1214,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
       <img id="modalImg" src="" style="width:100%;border-radius:12px 12px 0 0;display:block">
       <div style="padding:24px">
         <h2 id="modalTitle" style="margin:0 0 8px;font-size:22px"></h2>
-        <p style="color:#555;line-height:1.6;margin-bottom:20px">This product is widely used in water treatment, natural gas, petrochemical and industrial filtration. Contact us for specifications, custom sizes and OEM/ODM service.</p>
+        <p style="color:#555;line-height:1.6;margin-bottom:20px">Send us the part number, a drawing or a photo of the element in use. We confirm dimensions, media and micron rating before quoting — custom sizes and OEM/ODM supported.</p>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
           <a id="modalWa" href="#" target="_blank" rel="noopener" style="flex:1;min-width:180px;background:#25D366;color:#fff;text-align:center;text-decoration:none;padding:13px 20px;border-radius:8px;font-weight:600">WhatsApp</a>
           <a id="modalMail" href="#" style="flex:1;min-width:180px;background:#1971C2;color:#fff;text-align:center;text-decoration:none;padding:13px 20px;border-radius:8px;font-weight:600">Email</a>
