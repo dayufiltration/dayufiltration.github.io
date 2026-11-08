@@ -55,12 +55,15 @@ a.go{display:inline-block;background:#ff6a00;color:#fff;text-decoration:none;pad
     if(!a) return;
     var h = a.getAttribute('href') || '';
     if(h.toLowerCase().indexOf('mailto:') !== 0) return;
+    if(a.getAttribute('data-dyquote')) return;
+    e.preventDefault();
     var addr = h.slice(7).split('?')[0];
     var ok = copyText(addr);
-    toast(ok ? (addr + ' copied \u2014 paste it into your mailbox if no mail app opens.')
+    toast(ok ? (addr + ' copied \u2014 paste it into your mailbox or send it on WhatsApp.')
              : ('Email us at ' + addr));
   }, true);
 })();
 </script>
+
 </body>
 </html>
