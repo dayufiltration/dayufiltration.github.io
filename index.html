@@ -1205,9 +1205,6 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         "Message:\n" + msg.value;
       if (window.dyCopy) window.dyCopy(plain);
       showToast("Inquiry copied to the clipboard. Paste it into an email to inquiry@dayufilters.com — or send the same text on WhatsApp.");
-      setTimeout(function(){
-        window.location.href = "mailto:inquiry@dayufilters.com?subject=" + subject + "&body=" + body;
-      }, 900);
     });
   }
 })();
@@ -1252,7 +1249,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     modal.style.display='flex';
   }
   document.querySelectorAll('.prod-card').forEach(function(card){
-    card.addEventListener('click',function(e){ if(e.target.closest('button'))return; openInquiry(card); });
+    card.addEventListener('click',function(e){ if(e.target.closest('button'))return; if(e.target.closest('a'))return; openInquiry(card); });
     var btn=card.querySelector('.inq');
     if(btn)btn.addEventListener('click',function(){ openInquiry(card); });
   });
@@ -1291,13 +1288,16 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     if(!a) return;
     var h = a.getAttribute('href') || '';
     if(h.toLowerCase().indexOf('mailto:') !== 0) return;
+    if(a.getAttribute('data-dyquote')) return;
+    e.preventDefault();
     var addr = h.slice(7).split('?')[0];
     var ok = copyText(addr);
-    toast(ok ? (addr + ' copied \u2014 paste it into your mailbox if no mail app opens.')
+    toast(ok ? (addr + ' copied \u2014 paste it into your mailbox or send it on WhatsApp.')
              : ('Email us at ' + addr));
   }, true);
 })();
 </script>
+
 </body>
 </html>
 
