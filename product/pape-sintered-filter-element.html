@@ -494,7 +494,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         <p class="pd-lead">PAPE Sintered filter element is manufactured by Xinxiang Da Yu Filtering Equipment Co., Ltd. for industrial water treatment, power plant water systems and process water lines. It is built as an OEM-compatible replacement element: send us the original part number, drawing or a sample and we match the dimensions, media and micron rating before production.</p>
         <h2 class="pd-h2">Key specifications</h2><table class="spec-table"><tr><th>Diameter</th><td>20/25/30/35/40/45/50/60mm</td></tr><tr><th>Length</th><td>5/10/20/30/40in</td></tr><tr><th>Accuracy</th><td>0.3/0.45/1/3/5/10/20/30/40/50µm</td></tr><tr><th>Max ΔP</th><td>6bar(0-40℃)/4bar(120℃)</td></tr></table><div class="pd-full"><h2 class="pd-h2">Full technical data</h2><table class="spec-table"><tr><td colspan="2" class="note">PE/PA sintered, porosity 60%</td></tr></table></div>
         <div class="pd-cta">
-          <a class="btn btn-primary" href="mailto:inquiry@dayufilters.com?subject=Inquiry%20about%20PAPE%20Sintered%20filter%20element">Request a quote</a>
+          <a data-dyquote="1" class="btn btn-primary" href="mailto:inquiry@dayufilters.com?subject=Inquiry%20about%20PAPE%20Sintered%20filter%20element">>Request a quote</a>
           <a class="btn btn-outline" href="/#contact">Contact our team</a>
         </div>
       </div>
@@ -608,12 +608,64 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     if(!a) return;
     var h = a.getAttribute('href') || '';
     if(h.toLowerCase().indexOf('mailto:') !== 0) return;
+    if(a.getAttribute('data-dyquote')) return;
+    e.preventDefault();
     var addr = h.slice(7).split('?')[0];
     var ok = copyText(addr);
-    toast(ok ? (addr + ' copied \u2014 paste it into your mailbox if no mail app opens.')
+    toast(ok ? (addr + ' copied \u2014 paste it into your mailbox or send it on WhatsApp.')
              : ('Email us at ' + addr));
   }, true);
 })();
 </script>
+
+<!--dy-quote-->
+<div id="dyqWrap" style="display:none;position:fixed;inset:0;background:rgba(12,30,51,.62);z-index:9998;align-items:center;justify-content:center;padding:20px">
+  <div style="background:#fff;border-radius:12px;max-width:520px;width:100%;padding:26px 24px 22px;position:relative;box-shadow:0 20px 60px rgba(0,0,0,.35)">
+    <button id="dyqClose" type="button" style="position:absolute;top:10px;right:14px;background:none;border:none;font-size:26px;line-height:1;color:#667;cursor:pointer">&times;</button>
+    <p style="font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#E8590C;font-weight:700;margin:0 0 10px">Request a quote</p>
+    <h3 id="dyqName" style="margin:0 0 8px;font-size:21px;line-height:1.28;color:#0C1E33"></h3>
+    <p style="color:#556;line-height:1.6;margin:0 0 20px;font-size:14.5px">Send us the part number, a drawing or a photo of the element in use. We confirm dimensions, media and micron rating before quoting.</p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap">
+      <a id="dyqWa" href="#" target="_blank" rel="noopener" style="flex:1;min-width:168px;background:#25D366;color:#fff;text-align:center;padding:13px 18px;border-radius:8px;font-weight:600;text-decoration:none;font-size:15px">WhatsApp</a>
+      <a id="dyqMail" href="mailto:inquiry@dayufilters.com" style="flex:1;min-width:168px;background:#1971C2;color:#fff;text-align:center;padding:13px 18px;border-radius:8px;font-weight:600;text-decoration:none;font-size:15px">Email</a>
+    </div>
+    <p style="font-size:12.5px;color:#8a95a1;margin:14px 0 0;line-height:1.5">WhatsApp opens with the product name already filled in. The Email option copies <b>inquiry@dayufilters.com</b> to your clipboard so it works even without a mail app.</p>
+  </div>
+</div>
+<script>
+/* DAYU quote chooser: ask WhatsApp or Email before doing anything */
+(function(){
+  var wrap=document.getElementById('dyqWrap');
+  if(!wrap) return;
+  var nm=document.getElementById('dyqName'), wa=document.getElementById('dyqWa'),
+      ml=document.getElementById('dyqMail'), cl=document.getElementById('dyqClose');
+  function pageName(){
+    var h=document.querySelector('h1');
+    if(h && h.textContent.trim()) return h.textContent.trim().replace(/\s+/g,' ');
+    return (document.title||'').split('|')[0].trim();
+  }
+  function open(a){
+    var href=a.getAttribute('href')||'';
+    var addr=href.slice(7).split('?')[0] || 'inquiry@dayufilters.com';
+    var n=pageName();
+    nm.textContent=n;
+    wa.setAttribute('href','https://wa.me/6580693756?text='+encodeURIComponent("Hello! I'm interested in: "+n+". Please send me the specifications and quotation."));
+    ml.setAttribute('href','mailto:'+addr+'?subject='+encodeURIComponent('Inquiry about '+n));
+    wrap.style.display='flex';
+  }
+  document.addEventListener('click', function(e){
+    var t=e.target;
+    var a=(t && t.closest) ? t.closest('a[data-dyquote]') : null;
+    if(!a) return;
+    e.preventDefault();
+    open(a);
+  }, true);
+  cl.addEventListener('click', function(){ wrap.style.display='none'; });
+  wrap.addEventListener('click', function(e){ if(e.target===wrap) wrap.style.display='none'; });
+  ml.addEventListener('click', function(){ setTimeout(function(){ wrap.style.display='none'; }, 700); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') wrap.style.display='none'; });
+})();
+</script>
+<!--/dy-quote-->
 </body>
 </html>
