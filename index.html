@@ -961,13 +961,12 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     <div class="form-card rv">
       <h3>Send us an inquiry</h3>
       <p class="fsub">Fields marked * are required. We will reply within 24 business hours.</p>
-      <form id="inquiryForm" action="https://formsubmit.co/sales@dayufilters.com" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="New inquiry from dayufilters.com">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_honey" value="">
-        <input type="hidden" name="_url" value="https://www.dayufilters.com/">
-        <input type="hidden" name="_next" value="https://www.dayufilters.com/thanks.html">
+      <form id="inquiryForm" action="https://api.web3forms.com/submit" method="POST" novalidate>
+        <input type="hidden" name="access_key" value="a74a4bb8-81eb-4193-a66e-222bc6cbe35f">
+        <input type="hidden" name="subject" value="New inquiry from dayufilters.com">
+        <input type="hidden" name="from_name" value="Dayu Filtration Website">
+        <input type="hidden" name="redirect" value="https://www.dayufilters.com/thanks.html">
+        <input type="hidden" name="botcheck" value="">
         <div class="f-row">
           <div class="f-field"><label for="fName">Name</label><input id="fName" name="name" type="text" placeholder="Enter your name..." autocomplete="name"></div>
           <div class="f-field"><label for="fEmail">Email <i>*</i></label><input id="fEmail" name="email" type="email" required placeholder="Enter your email..." autocomplete="email"></div>
@@ -1187,27 +1186,50 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     toastTimer = setTimeout(function(){ toast.classList.remove("show"); }, 4200);
   }
 
-  /* Inquiry form: validate, then POST to the form backend (FormSubmit) */
+  /* Inquiry form: validate, then submit to Web3Forms and land on the thank-you page */
   var form = document.getElementById("inquiryForm");
   if (form) {
     var submitBtn = form.querySelector('button[type="submit"]');
     form.addEventListener("submit", function(e){
       e.preventDefault();
-      var email = form.email, msg = form.message;
-      if (!email.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
-        email.focus(); showToast("Please enter a valid email address.");
+      var emailEl = form.elements["email"], msgEl = form.elements["message"];
+      var val = function(k){ return (form.elements[k] || {}).value || ""; };
+      if (!emailEl.value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailEl.value)) {
+        emailEl.focus(); showToast("Please enter a valid email address.");
         return;
       }
-      if (!msg.value.trim()) { msg.focus(); showToast("Please describe your inquiry."); return; }
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.innerHTML = 'Sending…';
-      }
+      if (!msgEl.value.trim()) { msgEl.focus(); showToast("Please describe your inquiry."); return; }
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = "Sending…"; }
       showToast("Sending your inquiry…");
-      form.submit();
+      var payload = {
+        access_key: "a74a4bb8-81eb-4193-a66e-222bc6cbe35f",
+        subject: "New inquiry from dayufilters.com",
+        from_name: "Dayu Filtration Website",
+        name: val("name"),
+        email: emailEl.value,
+        phone: val("tel"),
+        country: val("country"),
+        message: msgEl.value
+      };
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(payload)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d && d.success) {
+          window.location.href = "thanks.html";
+          return;
+        }
+        throw new Error((d && d.message) || "Submission rejected");
+      })
+      .catch(function(){
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = "Submit inquiry"; }
+        showToast("Could not send. Please email sales@dayufilters.com or WhatsApp +65 8069 3756.");
+      });
     });
   }
-})();
 </script>
 
 <a href="https://wa.me/6580693756?text=Hello%21%20I%27m%20interested%20in%20your%20filtration%20products." class="wa-float" target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
