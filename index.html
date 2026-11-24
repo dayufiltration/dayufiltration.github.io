@@ -961,7 +961,11 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     <div class="form-card rv">
       <h3>Send us an inquiry</h3>
       <p class="fsub">Fields marked * are required. We will reply within 24 business hours.</p>
-      <form id="inquiryForm" novalidate>
+      <form id="inquiryForm" action="https://formsubmit.co/sales@dayufilters.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New inquiry from dayufilters.com">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_honey" value="">
         <div class="f-row">
           <div class="f-field"><label for="fName">Name</label><input id="fName" name="name" type="text" placeholder="Enter your name..." autocomplete="name"></div>
           <div class="f-field"><label for="fEmail">Email <i>*</i></label><input id="fEmail" name="email" type="email" required placeholder="Enter your email..." autocomplete="email"></div>
@@ -974,7 +978,7 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         <button class="btn btn-primary" type="submit">Submit inquiry
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
         </button>
-        <p class="form-note">This static page prepares your inquiry as an email to our sales team. On sites deployed with a form backend, submissions are sent automatically.</p>
+        <p class="form-note">Your inquiry is delivered straight to our sales inbox (sales@dayufilters.com). We reply within 24 business hours — usually much sooner.</p>
       </form>
     </div>
   </div>
@@ -1181,9 +1185,10 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
     toastTimer = setTimeout(function(){ toast.classList.remove("show"); }, 4200);
   }
 
-  /* Inquiry form: validate, then hand off to email client */
+  /* Inquiry form: validate, then POST to the form backend (FormSubmit) */
   var form = document.getElementById("inquiryForm");
   if (form) {
+    var submitBtn = form.querySelector('button[type="submit"]');
     form.addEventListener("submit", function(e){
       e.preventDefault();
       var email = form.email, msg = form.message;
@@ -1192,27 +1197,27 @@ h2{font-size:clamp(2rem,4.2vw,3.3rem);margin-bottom:18px}
         return;
       }
       if (!msg.value.trim()) { msg.focus(); showToast("Please describe your inquiry."); return; }
-      var name = (form.name && form.name.value) ? form.name.value.trim() : "—";
-      var tel = (form.tel && form.tel.value) ? form.tel.value.trim() : "—";
-      var country = (form.country && form.country.value) ? form.country.value.trim() : "—";
-      var subject = encodeURIComponent("Inquiry from Dayu Filtration website");
-      var body = encodeURIComponent(
-        "Name: " + name + "\n" +
-        "Email: " + email.value + "\n" +
-        "Phone/WhatsApp: " + tel + "\n" +
-        "Country/Region: " + country + "\n\n" +
-        "Message:\n" + msg.value
-      );
-      var plain =
-        "To: sales@dayufilters.com\n" +
-        "Subject: Inquiry from Dayu Filtration website\n\n" +
-        "Name: " + name + "\n" +
-        "Email: " + email.value + "\n" +
-        "Phone/WhatsApp: " + tel + "\n" +
-        "Country/Region: " + country + "\n\n" +
-        "Message:\n" + msg.value;
-      if (window.dyCopy) window.dyCopy(plain);
-      showToast("Inquiry copied to the clipboard. Paste it into an email to sales@dayufilters.com — or send the same text on WhatsApp.");
+      if (submitBtn) { submitBtn.disabled = true; }
+      showToast("Sending your inquiry...");
+      var payload = new FormData(form);
+      fetch("https://formsubmit.co/ajax/sales@dayufilters.com", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: payload
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(d){
+        if (d && (d.success === true || d.success === "true")) {
+          form.reset();
+          showToast("Thank you — your inquiry has been sent. We reply within 24 business hours.");
+        } else {
+          showToast("Automatic sending failed. Please email sales@dayufilters.com or WhatsApp +65 8069 3756.");
+        }
+      })
+      .catch(function(){
+        showToast("Automatic sending failed. Please email sales@dayufilters.com or WhatsApp +65 8069 3756.");
+      })
+      .then(function(){ if (submitBtn) { submitBtn.disabled = false; } });
     });
   }
 })();
